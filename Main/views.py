@@ -42,6 +42,9 @@ def Project(request):
     
     return render(request, 'project-3-col.html')
 
+def Project_Detail(request):
+    
+    return render(request, 'projct-details.html')
 def Blogs(request):
     
     return render(request, 'blog-sidebar-right.html')
