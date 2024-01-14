@@ -62,7 +62,7 @@
                 <div class="container">
                     <div class="col-sm-3">
                         <div class="navbar-header">
-                            <a href="#" class="brand"><img src="{% static 'img/logo-light.png' %}" alt="ТУРАКУРГАН"></a>
+                            <a href="#" class="brand"><img src="{{info.logo.url }}" alt="ТУРАКУРГАН"></a>
                         </div>
                     </div>
                     <div class="col-sm-9 hidden-xs">
@@ -98,12 +98,13 @@
         
         <section class="slider-section">
             <div class="main-slider owl-carousel owl-nav-3 owl-dots-1">
-                <div class="slide-item bg-img height-670" style="background-image: url({% static 'img/slide-1.jpg' %})">
+                {% for i in slider %}
+                <div class="slide-item bg-img height-670" style="background-image: url({{i.img.url}})">
                     <div class="display-table">
                         <div class="table-cell">
                             <div class="container">
                                 <div class="slider-content">
-                                    <h1 class="fz-45 text-white fw-8 tt-u">ТУРАКУРГАНСКИЙ МЕХАНИЧЕСКИЙ ЗАВОД</h1>
+                                    <h1 class="fz-45 text-white fw-8 tt-u">{{i.title}}</h1>
                                     <p class="text-white mb-20 xs-br-none fz-16">Мы предлагаем бесплатные консультации и лучшее управление проектами <br> для ваших идей, 100% гарантия реализации.</p>
                                     <div class="btn-group-left">
                                         <a href="{% static 'Document.png' %}" class="b-btn">Узнать больше</a>
@@ -113,38 +114,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="slide-item bg-img height-670" style="background-image: url({% static 'img/slide-2.jpg' %})">
-                    <div class="display-table">
-                        <div class="table-cell">
-                            <div class="container">
-                                <div class="slider-content">
-                                    <h1 class="fz-45 text-white fw-8 tt-u">Ultimate Construction</h1>
-                                    <p class="text-white mb-20 xs-br-none fz-16">We offer free consulting and the best project management <br>for your ideas, 100% delivery guaranteed.</p>
-                                    <div class="btn-group-left">
-                                        <a href="#" class="b-btn">Learn More</a>
-                                        <a href="#" class="b-btn">Get It Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="slide-item bg-img height-670" style="background-image: url({% static 'img/slide-3.jpg' %})">
-                    <div class="display-table">
-                        <div class="table-cell">
-                            <div class="container">
-                                <div class="slider-content">
-                                    <h1 class="fz-45 text-white fw-8 tt-u">Ultimate Construction</h1>
-                                    <p class="text-white mb-20 xs-br-none fz-16">We offer free consulting and the best project management <br>for your ideas, 100% delivery guaranteed.</p>
-                                    <div class="btn-group-left">
-                                        <a href="#" class="b-btn">Learn More</a>
-                                        <a href="#" class="b-btn">Get It Now</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
         </section><!-- slider-section -->
         
@@ -153,19 +123,19 @@
                 <div class="col-sm-7 xs-padding wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1000ms">
                     <div class="entry-content sm-no-padding ptb-30">
                         <h2 class="mb-20">МЫ ЭКСПЕРТ В ЭТОЙ ОБЛАСТИ<br>
-                            ЛУЧШИЕ СТРОИТЕЛЬНЫЕ РЕШЕНИЯ С 1984 ГОДА.</h2>
+                            ЛУЧШИЕ СТРОИТЕЛЬНЫЕ РЕШЕНИЯ С 2015 ГОДА.</h2>
                         <p class="fz-14">Мы стремимся построить устойчивое будущее, поощряя дух сотрудничества, который создает исключительный опыт, сбалансированные отношения и улучшает созданную среду сообщества.</p>
                     </div>
                 </div>
                 <div class="col-sm-5 xs-padding wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
                     <div class="content-box bg-yellow padding-40">
-                        <h4 class="text-white pb-5 bd-bottom-white">ТУРАКУРГАНСКИЙ МЕХАНИЧЕСКИЙ ЗАВОД</h4>
+                        <h4 class="text-white pb-5 bd-bottom-white">{{info.name}}</h4>
                         <ul class="addr-info text-white fz-13">
-                            <li>Шохизинда 62 Хартум МФЙ</li>
-                            <li>+998 97 581 23 43</li>
-                            <li>+79608041333</li>
-                            <li>ulugbek.yuldashev.1966@mail.ru</li>
-                            <li>С Пон до Суб: 09:00 - 18:00 </li>
+                            <li>{{info.location}}</li>
+                            <li>{{info.phone_uz}}</li>
+                            <li>{{info.phone_ru}}</li>
+                            <li>{{info.email}}</li>
+                            <li>{{info.timetable}}</li>
                         </ul>
                     </div>
                 </div>
@@ -191,7 +161,6 @@
                             </i>
 							<h4 class="fw-7">ДЕТАЛИ</h4>
 							<p class="fz-13">Процесс ремонта обычно можно разбить на несколько этапов:</p>
-							<a href="#" class="read-more fz-12 tt-u">Read More</a>
 						</div>
 					</li>
 					<li class="col-md-4 col-xs-6 ptb-15 wow zoomIn" data-wow-delay="0ms" data-wow-duration="1000ms">
@@ -238,7 +207,7 @@
             <div class="container">
                 <div class="row mb-40">
                     <div class="col-sm-6 xs-padding">
-                        <h2 class="fw-7">ПОСЛЕДНИЕ ПРОЕКТЫ В СТРОИТЕЛЬСТВЕ </h2>
+                        <h2 class="fw-7">ГАЛЕРЕЯ ПОСЛЕДНИХ СТРОИТЕЛЬНЫХ ПРОЕКТОВ </h2>
                     </div>
                     <div class="col-sm-6 xs-padding">
                         <ul class="filter-menu text-right xs-text-center">
@@ -250,89 +219,26 @@
                     </div>
                 </div>
                 <div class="portfolio-items filter-items img-w1 row">
+                    {% for i in product %}
                     <div class="col-sm-4 col-xs-6 single-item padding-10 architecture">
                         <div class="portfolio-box">
-                            <img class="img-w1" src="{% static 'img/project-1.jpg' %}" alt="Portfolio Image">
-                            <a href="{% static 'img/project-2.jpg' %}" class="overlay lightbox text-center">
+                            <img class="img-w1" src="{{i.img.url}}" alt="Portfolio Image">
+                            <a href="{{i.img.url}}" class="overlay lightbox text-center">
                                 <div class="display-table">
                                     <div class="table-cell padding-15">
                                         <h4 class="mb-10 fz-16 text-white display-inline-block padding-25 ptb-15 bg-yellow">ДИЗАЙН ИНТЕРЬЕРА</h4>
-                                        <p class="no-margin fz-14">«Дизайн интерьера» — незаменимый ресурс для дизайнеров интерьеров.</p>
+                                        <p class="no-margin fz-14">{{i.name}}</p>
                                     </div>
                                 </div>
                             </a>
                         </div>
                     </div>
-                    <div class="col-sm-4 col-xs-6 single-item padding-10 construction">
-                        <div class="portfolio-box">
-                            <img class="img-w1" src="{% static 'img/project-2.jpg' %}" alt="Portfolio Image">
-                            <a href="{% static 'img/project-2.jpg' %}" class="overlay lightbox text-center">
-                                <div class="display-table">
-                                    <div class="table-cell padding-15">
-                                        <h4 class="mb-10 fz-16 text-white display-inline-block bdrs-3 padding-25 ptb-15 bg-yellow">Interior Design</h4>
-                                        <p class="no-margin fz-14">Interior Design is the definitive resource for interior designers</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-xs-6 single-item padding-10 architecture">
-                        <div class="portfolio-box">
-                            <img class="img-w1" src="{% static 'img/project-3.jpg' %}" alt="Portfolio Image">
-                            <a href="{% static 'img/project-2.jpg' %}" class="overlay lightbox text-center">
-                                <div class="display-table">
-                                    <div class="table-cell padding-15">
-                                        <h4 class="mb-10 fz-16 text-white display-inline-block bdrs-3 padding-25 ptb-15 bg-yellow">Interior Design</h4>
-                                        <p class="no-margin fz-14">Interior Design is the definitive resource for interior designers</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-xs-6 single-item padding-10 construction">
-                        <div class="portfolio-box">
-                            <img class="img-w1" src="{% static 'img/project-4.jpg' %}" alt="Portfolio Image">
-                            <a href="{% static 'img/project-2.jpg' %}" class="overlay lightbox text-center">
-                                <div class="display-table">
-                                    <div class="table-cell padding-15">
-                                        <h4 class="mb-10 fz-16 text-white display-inline-block bdrs-3 padding-25 ptb-15 bg-yellow">Interior Design</h4>
-                                        <p class="no-margin fz-14">Interior Design is the definitive resource for interior designers</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-xs-6 single-item padding-10 architecture">
-                        <div class="portfolio-box">
-                            <img class="img-w1" src="{% static 'img/project-5.jpg' %}" alt="Portfolio Image">
-                            <a href="{% static 'img/project-2.jpg' %}" class="overlay lightbox text-center">
-                                <div class="display-table">
-                                    <div class="table-cell padding-15">
-                                        <h4 class="mb-10 fz-16 text-white display-inline-block bdrs-3 padding-25 ptb-15 bg-yellow">Interior Design</h4>
-                                        <p class="no-margin fz-14">Interior Design is the definitive resource for interior designers</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-xs-6 single-item padding-10 interior">
-                        <div class="portfolio-box">
-                            <img class="img-w1" src="{% static 'img/project-6.jpg' %}" alt="Portfolio Image">
-                            <a href="{% static 'img/project-2.jpg' %}" class="overlay lightbox text-center">
-                                <div class="display-table">
-                                    <div class="table-cell padding-15">
-                                        <h4 class="mb-10 fz-16 text-white display-inline-block bdrs-3 padding-25 ptb-15 bg-yellow">Interior Design</h4>
-                                        <p class="no-margin fz-14">Interior Design is the definitive resource for interior designers</p>
-                                    </div>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </section><!-- portfolio-section -->
         
-		<section class="content-block pos-relative padding bg-grey bd-bottom">
+		<!-- <section class="content-block pos-relative padding bg-grey bd-bottom">
             <div class="bg-img-wrap wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
             </div>
             <div class="container">
@@ -349,17 +255,18 @@
                     </div>
                 </div>
             </div>
-        </section><!-- content-block -->
+        </section>content-block -->
         
         <section class="testimonial-section padding bd-bottom">
             <div class="container">
                 <div class="section-heading pb-5 mb-40">
-                    <h2>WHAT PEOPLE THINK ABOUT US</h2>
+                    <h2>ЧТО ЛЮДИ ДУМАЮТ О НАС</h2>
                 </div>
                 <div class="testi-carousel owl-nav-1 owl-carousel">
+                    {% for i in client %}
                     <div class="review-box padding-20 ptb-40 bg-grey bd">
-                        <p class="fz-13">Construction delivers world-class engineering construction services. We are pioneers in the UAEinfrastructure industry. </p>
-                        <h4 class="display-inline-block">ANGELINA ROSE</h4>
+                        <p class="fz-13">{{i.idea}}</p>
+                        <h4 class="display-inline-block">{{i.name}}</h4>
                         <ul class="rating display-inline-block">
                             <li><i class="ti-star text-yellow"></i></li>
                             <li><i class="ti-star text-yellow"></i></li>
@@ -368,39 +275,7 @@
                             <li><i class="ti-star text-yellow"></i></li>
                         </ul>
                     </div>
-                    <div class="review-box padding-20 ptb-40 bg-grey bd">
-                        <p class="fz-13">Construction delivers world-class engineering construction services. We are pioneers in the UAEinfrastructure industry. </p>
-                        <h4 class="display-inline-block">Oscar Aries Sanzes</h4>
-                        <ul class="rating display-inline-block">
-                            <li><i class="ti-star text-yellow"></i></li>
-                            <li><i class="ti-star text-yellow"></i></li>
-                            <li><i class="ti-star text-yellow"></i></li>
-                            <li><i class="ti-star text-yellow"></i></li>
-                            <li><i class="ti-star text-yellow"></i></li>
-                        </ul>
-                    </div>
-                    <div class="review-box padding-20 ptb-40 bg-grey bd">
-                        <p class="fz-13">Construction delivers world-class engineering construction services. We are pioneers in the UAEinfrastructure industry. </p>
-                        <h4 class="display-inline-block">ANGELINA ROSE</h4>
-                        <ul class="rating display-inline-block">
-                            <li><i class="ti-star text-yellow"></i></li>
-                            <li><i class="ti-star text-yellow"></i></li>
-                            <li><i class="ti-star text-yellow"></i></li>
-                            <li><i class="ti-star text-yellow"></i></li>
-                            <li><i class="ti-star text-yellow"></i></li>
-                        </ul>
-                    </div>
-                    <div class="review-box padding-20 ptb-40 bg-grey bd">
-                        <p class="fz-13">Construction delivers world-class engineering construction services. We are pioneers in the UAEinfrastructure industry.</p>
-                        <h4 class="display-inline-block">Jonathan Markus</h4>
-                        <ul class="rating display-inline-block">
-                            <li><i class="ti-star text-yellow"></i></li>
-                            <li><i class="ti-star text-yellow"></i></li>
-                            <li><i class="ti-star text-yellow"></i></li>
-                            <li><i class="ti-star text-yellow"></i></li>
-                            <li><i class="ti-star text-yellow"></i></li>
-                        </ul>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </section><!-- testimonial-section -->
@@ -408,39 +283,20 @@
         <section class="blog-section padding bg-grey bd-bottom">
             <div class="container">
                 <div class="section-heading ml-15 mb-40">
-                    <h2>Our Latest News</h2>
+                    <h2>НАШИ ПОСЛЕДНИЕ ПРОДУКТЫ</h2>
                 </div>
                 <div class="blog-wrapper">
+                    {% for i in product3 %}
                     <div class="col-sm-4 col-xs-6 xs-padding wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1000ms">
                         <div class="article-box">
-                            <img src="{% static 'img/news-1.jpg' %}" class="img-w1" alt="Blog-image">
+                            <img src="{{i.img.url}}" class="img-w1" alt="Blog-image">
                             <div class="entry-content mt-15">
-                                <h4>USING THE RIGHT MATERIALS.</h4>
-                                <p class="fz-13">Learn about the best paper and materials to use for physical records and what not to use.</p>
-                                <a href="" class="read-more fz-12 tt-u">Read More</a>
+                                <h4>{{i.name}}</h4>
+                                <p class="fz-13">{{i.description}}</p>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4 col-xs-6 xs-padding wow fadeInUp" data-wow-delay="0ms" data-wow-duration="1000ms">
-                        <div class="article-box">
-                            <img src="{% static 'img/news-2.jpg' %}" class="img-w1" alt="Blog-image">
-                            <div class="entry-content mt-15">
-                                <h4>DIGITAL TOOLS FOR YOUR BUSINESS.</h4>
-                                <p class="fz-13">Digital tools can help your business grow by finding more customers, reaching new markets.</p>
-                                <a href="" class="read-more fz-12 tt-u">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-xs-6 xs-padding wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
-                        <div class="article-box">
-                            <img src="{% static 'img/news-3.jpg' %}" class="img-w1" alt="Blog-image">
-                            <div class="entry-content mt-15">
-                                <h4>CHOSSING THE RIGHT ARCHITECT.</h4>
-                                <p class="fz-13">Ultimately you want to find the architect . don't feel limited to choosing your community.</p>
-                                <a href="" class="read-more fz-12 tt-u">Read More</a>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </section><!-- blog-section -->
@@ -512,8 +368,8 @@
         
         <section class="cta-section text-center bg-yellow ptb-40">
             <div class="container">
-                <h2 class="text-white fz-18 no-margin display-inline-block">GET YOUR FREE CONSULTING AND ESTIMATE FOR YOUR PROJECT</h2>
-                <a href="#" class="b-btn btn-white btn-border ml-15">Explore</a>
+                <h2 class="text-white fz-18 no-margin display-inline-block">ПОЛУЧИТЕ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ И СМЕТУ ДЛЯ ВАШЕГО ПРОЕКТА</h2>
+                <a href="{% url 'contact' %}" class="b-btn btn-white btn-border ml-15">Связаться</a>
             </div>
         </section><!-- cta-section -->
         
@@ -521,32 +377,31 @@
             <div class="container">
                 <div class="col-sm-4 col-xs-6 xs-padding">
                     <div class="widget-box">
-                        <img class="mb-15" src="{% static 'img/logo-light.png' %}" alt="Construction">
-                        <h4 class="text-light mb-25">Ultimate design for your websites</h4>
-                        <p class="fz-13 mb-25 text-light">Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days.</p>
+                        <img class="mb-15" src="{{info.logo.url}}" alt="Construction">
+                        <h4 class="text-light mb-25">Превосходный продукт для вашего строительства</h4>
+                        <p class="fz-13 mb-25 text-light">Позвоните нам или зайдите в любое время, мы постараемся ответить на все запросы в течение 24 часов в рабочие дни.</p>
                     </div>
                 </div><!-- widget 1 -->
                 <div class="col-sm-5 col-xs-6 xs-padding">
-                    <h4 class="text-white mb-40">Company navigation</h4>
+                    <h4 class="text-white mb-40">Навигация по компании</h4>
                     <ul class="list-1 angel mb-20">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Interior Design</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Recent Projects</a></li>
-                            <li><a href="#">Service</a></li>
-                            <li><a href="#">Architecture</a></li>
-                            <li><a href="#">Construction</a></li>
-                            <li><a href="#">Building Renovation</a></li>
+                            <li><a href="{% url 'index' %}">Главная</a></li>
+                            <li><a href="{% url 'about' %}">О нас</a></li>
+                            <li><a href="{% url 'projects' %}">Недавние Проекты</a></li>
+                            <li><a href="{% url 'services' %}"> СЕРВИСЫ</a></li>
+                            <li><a href="{% url 'blogs' %}">НОВОСТИ</a></li>
+                            <li><a href="{% url 'contact' %}"> СВЯЗЫВАТЬСЯ С НАМИ</a></li>
                         </ul>
                 </div><!-- widget 2 -->
                 <div class="col-sm-3 col-xs-6 xs-padding">
                     <div class="widget-box">
-                        <h4 class="text-white mb-30">Construction Office</h4>
+                        <h4 class="text-white mb-30">{{info.name}}</h4>
                         <ul class="addr-info footer-addr text-light fz-14">
-                            <li>Tottenh Road, London, England.</li>
-                            <li>(102) 6666 8888</li>
-                            <li>info@thememove.com</li>
-                            <li>Mon - Sat: 9:00 - 18:00</li>
+                            <li>{{info.location}}</li>
+                            <li>{{info.phone_uz}}</li>
+                            <li>{{info.phone_ru}}</li>
+                            <li>{{info.email}}</li>
+                            <li>{{info.timetable}}</li>
                         </ul>
                     </div>
                 </div><!-- widget 3 -->
@@ -555,7 +410,7 @@
 		
 		<footer class="footer-section bg-dark text-center bd-top-dark ptb-40 tt-u">
             <div class="container">
-                <p class="no-margin fz-13 text-light">&copy; Copyright 2017 Crack Themes - All Rights Reserved</p>
+                <p class="no-margin fz-13 text-light">&copy; Copyright 2024 - All Rights Reserved</p>
             </div>
         </footer><!--  footer section -->
 

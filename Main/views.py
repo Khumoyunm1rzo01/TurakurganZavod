@@ -4,27 +4,35 @@ from .models import *
 import requests
 
 def Index(request):
-    # title = Title.objects.last()
-    # me = Me.objects.last()
-    # team = Team.objects.last()
-    # about = About.objects.last()
-    # design = Design.objects.last()
-    # project = Project.objects.last()
-    # video = YoutubeVideo.objects.last()
-    # context = {
-    #     'me': me,
-    #     'about': about,
-    #     'design': design, 
-    #     'title': title,
-    #     'video': video,
-    #     'project': project, 
-    #     'team': team
-    # }
-    return render(request, 'index.html')
+    slider = Slider.objects.all()
+    info = Info.objects.last()
+    product = Product.objects.all().order_by('-id')[:6]
+    client = Client.objects.all()
+    product3 = Product.objects.all().order_by('-id')[:3]
+    context = {
+        'slider': slider,
+        'info': info,
+        'product': product,
+        'product3': product3,
+        'client': client,
+    }
+    
+    return render(request, 'index.html', context)
 
 def About(request):
-    
-    return render(request, 'about.html')
+    about = About_model.objects.last()
+    team_members = TeamMember.objects.all()
+    client = Client.objects.all()
+    info = Info.objects.last()
+
+    context = {
+        'about': about,
+        'client': client,
+        'info': info,
+        'team_members': team_members,
+    }
+
+    return render(request, 'about.html', context)
 
 def Service(request):
     
@@ -45,3 +53,8 @@ def BlogsFull(request):
 def Contact(request):
     
     return render(request, 'contact.html')
+
+
+def Project_Details(request):
+    
+    return render(request, 'project-details.html')

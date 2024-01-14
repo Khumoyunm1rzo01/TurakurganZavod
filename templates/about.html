@@ -95,8 +95,9 @@
                 <div class="table-cell">
                     <div class="container">
                         <div class="hero-content">
-                            <h2 class="fz-40 text-white fw-8 mb-15">ABOUT CONSTRUCTION</h2>
-                            <p class="text-white fz-16">We offer free consulting and the best project management <br>for your ideas, 100% delivery guaranteed.</p>
+                            <h2 class="fz-40 text-white fw-8 mb-15">О ПРОИЗВОДСТВЕ</h2>
+                            <p class="text-white fz-16">Мы предлагаем бесплатную консультацию и лучшее управление проектами
+                                для ваших идей 100% гарантия доставки.</p>
                         </div>
                     </div>
                 </div>
@@ -105,16 +106,13 @@
 
         <section class="content-block pos-relative bg-grey bd-bottom">
             <div class="bg-img-wrap pos-right wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
-                <div class="bg-img atts-scroll" style="background-image: url({% static 'img/about-bg.jpg' %});"></div>
+                <div class="bg-img atts-scroll" style="background-image: url({{about.img.url}});"></div>
             </div>
             <div class="container">
                 <div class="col-sm-6 xs-padding wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1000ms">
                     <div class="pr-15 ptb-60">
-                        <h2 class="mb-20">WE ARE THE EXPERT ON THIS FIELD <br>
-                            BETTER BUILDING SOLUTIONS SINCE 1984.</h2>
-                        <p class="fz-14">We are committed to building a sustainable future by fostering a collaborative spirit  that creates exceptional experiences balanced relationships and many enhances a community’s built environment.</p>
-                        <p class="mb-20">Building construction is the process of adding structure to real property or construction of buildings. The majority of building construction jobs are small renovations, such as addition of a room, or renovation of a bathroom.</p>
-                        <a href="#" class="b-btn">Read More</a>
+                        <h2 class="mb-20">{{about.title}}</h2>
+                        <p class="fz-14">{{about.text}}</p>
                     </div>
                 </div>
             </div>
@@ -123,57 +121,33 @@
         <section class="team-section padding bg-grey bd-bottom">
             <div class="container">
                 <div class="section-heading mb-40">
-                    <h2 class="mb-10">Experience Team Member</h2>
+                    <h2 class="mb-10">ОПЫТНЫЙ ЧЛЕН КОМАНДЫ</h2>
                 </div>
                 <div class="team-box-wrap">
+                    {% for i in team_members %}
                     <div class="col-sm-4 col-xs-6 xs-padding wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="500ms">
                         <div class="team-member bd-grey">
-                            <img src="{% static 'img/team-1.jpg' %}" alt="team-img" class="img-w1">
+                            <img src="{{i.img.url}}" alt="team-img" class="img-w1">
                             <div class="bg-white padding-30 ptb-25 text-center">
-                                <h4 class="no-margin">Markus Smith</h4>
-                                <p class="mb-10">CEO and founder of Construction ltd.</p>
+                                <h4 class="no-margin">{{i.name}}</h4>
+                                <p class="mb-10">{{i.job}}</p>
                                 <ul class="social-icon-black social-center">
-                                    <li><a href="#"><i class="ti-facebook"></i></a></li>
-                                    <li><a href="#"><i class="ti-twitter"></i></a></li>
-                                    <li><a href="#"><i class="ti-google"></i></a></li>
-                                    <li><a href="#"><i class="ti-instagram"></i></a></li>
-                                    <li><a href="#"><i class="ti-pinterest"></i></a></li>
+                                    {% if i.facebook is not None %}
+                                    <li><a href="{{i.facebook}}"><i class="ti-facebook"></i></a></li>
+                                    {% endif %}
+                                    {% if i.telegram is not None %}
+                                    <li><a href="{{i.telegram}}"><i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
+                                      </svg></i></a></li>
+                                    {% endif %}
+                                    {% if i.instagram is not None %}
+                                    <li><a href="{{i.instagram}}"><i class="ti-instagram"></i></a></li>
+                                    {% endif %}
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-4 col-xs-6 xs-padding wow fadeInUp" data-wow-delay="0ms" data-wow-duration="2000ms">
-                        <div class="team-member bd-grey">
-                            <img src="{% static 'img/team-2.jpg' %}" alt="team-img" class="img-w1">
-                            <div class="bg-white padding-30 ptb-25 text-center">
-                                <h4 class="no-margin">Veera Pamela</h4>
-                                <p class="mb-10">Construction engineer</p>
-                                <ul class="social-icon-black social-center">
-                                    <li><a href="#"><i class="ti-facebook"></i></a></li>
-                                    <li><a href="#"><i class="ti-twitter"></i></a></li>
-                                    <li><a href="#"><i class="ti-google"></i></a></li>
-                                    <li><a href="#"><i class="ti-instagram"></i></a></li>
-                                    <li><a href="#"><i class="ti-pinterest"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-xs-6 xs-padding wow fadeInRight" data-wow-delay="0ms" data-wow-duration="2000ms">
-                        <div class="team-member bd-grey">
-                            <img src="{% static 'img/team-3.jpg' %}" alt="team-img" class="img-w1">
-                            <div class="bg-white padding-30 ptb-25 text-center">
-                                <h4 class="no-margin">Michel Duncan</h4>
-                                <p class="mb-10">Vehicle park manager</p>
-                                <ul class="social-icon-black social-center">
-                                    <li><a href="#"><i class="ti-facebook"></i></a></li>
-                                    <li><a href="#"><i class="ti-twitter"></i></a></li>
-                                    <li><a href="#"><i class="ti-google"></i></a></li>
-                                    <li><a href="#"><i class="ti-instagram"></i></a></li>
-                                    <li><a href="#"><i class="ti-pinterest"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </section><!-- team Block-->
@@ -184,9 +158,10 @@
                     <h2>WHAT PEOPLE THINK ABOUT US</h2>
                 </div>
                 <div class="testi-carousel owl-nav-1 owl-carousel">
+                    {% for i in client %}
                     <div class="review-box padding-20 ptb-40 bg-grey bd">
-                        <p class="fz-13">Construction delivers world-class engineering construction services. We are pioneers in the UAEinfrastructure industry. </p>
-                        <h4 class="display-inline-block">ANGELINA ROSE</h4>
+                        <p class="fz-13">{{i.idea}}</p>
+                        <h4 class="display-inline-block">{{i.name}}</h4>
                         <ul class="rating display-inline-block">
                             <li><i class="ti-star text-yellow"></i></li>
                             <li><i class="ti-star text-yellow"></i></li>
@@ -195,44 +170,12 @@
                             <li><i class="ti-star text-yellow"></i></li>
                         </ul>
                     </div>
-                    <div class="review-box padding-20 ptb-40 bg-grey bd">
-                        <p class="fz-13">Construction delivers world-class engineering construction services. We are pioneers in the UAEinfrastructure industry. </p>
-                        <h4 class="display-inline-block">Oscar Aries Sanzes</h4>
-                        <ul class="rating display-inline-block">
-                            <li><i class="ti-star text-yellow"></i></li>
-                            <li><i class="ti-star text-yellow"></i></li>
-                            <li><i class="ti-star text-yellow"></i></li>
-                            <li><i class="ti-star text-yellow"></i></li>
-                            <li><i class="ti-star text-yellow"></i></li>
-                        </ul>
-                    </div>
-                    <div class="review-box padding-20 ptb-40 bg-grey bd">
-                        <p class="fz-13">Construction delivers world-class engineering construction services. We are pioneers in the UAEinfrastructure industry. </p>
-                        <h4 class="display-inline-block">ANGELINA ROSE</h4>
-                        <ul class="rating display-inline-block">
-                            <li><i class="ti-star text-yellow"></i></li>
-                            <li><i class="ti-star text-yellow"></i></li>
-                            <li><i class="ti-star text-yellow"></i></li>
-                            <li><i class="ti-star text-yellow"></i></li>
-                            <li><i class="ti-star text-yellow"></i></li>
-                        </ul>
-                    </div>
-                    <div class="review-box padding-20 ptb-40 bg-grey bd">
-                        <p class="fz-13">Construction delivers world-class engineering construction services. We are pioneers in the UAEinfrastructure industry.</p>
-                        <h4 class="display-inline-block">Jonathan Markus</h4>
-                        <ul class="rating display-inline-block">
-                            <li><i class="ti-star text-yellow"></i></li>
-                            <li><i class="ti-star text-yellow"></i></li>
-                            <li><i class="ti-star text-yellow"></i></li>
-                            <li><i class="ti-star text-yellow"></i></li>
-                            <li><i class="ti-star text-yellow"></i></li>
-                        </ul>
-                    </div>
+                    {% endfor %}
                 </div>
             </div>
         </section><!-- testimonial-section -->
         
-        <div class="partner-block ptb-40">
+        <!-- <div class="partner-block ptb-40">
             <div class="container">
                 <div class="col-sm-2 col-xs-4">     
                     <div class="brand-item padding-10">
@@ -296,11 +239,11 @@
                 </div>
             </div>
         </div><!-- partner block -->
-        
-        <section class="cta-section text-center bg-yellow ptb-40">
+         -->
+         <section class="cta-section text-center bg-yellow ptb-40">
             <div class="container">
-                <h2 class="text-white fz-18 no-margin display-inline-block">GET YOUR FREE CONSULTING AND ESTIMATE FOR YOUR PROJECT</h2>
-                <a href="#" class="b-btn btn-white btn-border ml-15">Explore</a>
+                <h2 class="text-white fz-18 no-margin display-inline-block">ПОЛУЧИТЕ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ И СМЕТУ ДЛЯ ВАШЕГО ПРОЕКТА</h2>
+                <a href="{% url 'contact' %}" class="b-btn btn-white btn-border ml-15">Связаться</a>
             </div>
         </section><!-- cta-section -->
         
@@ -308,40 +251,40 @@
             <div class="container">
                 <div class="col-sm-4 col-xs-6 xs-padding">
                     <div class="widget-box">
-                        <img class="mb-15" src="{% static 'img/logo-light.png' %}" alt="Construction">
-                        <h4 class="text-light mb-25">Ultimate design for your websites</h4>
-                        <p class="fz-13 mb-25 text-light">Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days.</p>
+                        <img class="mb-15" src="{{info.logo.url}}" alt="Construction">
+                        <h4 class="text-light mb-25">Превосходный продукт для вашего строительства</h4>
+                        <p class="fz-13 mb-25 text-light">Позвоните нам или зайдите в любое время, мы постараемся ответить на все запросы в течение 24 часов в рабочие дни.</p>
                     </div>
                 </div><!-- widget 1 -->
                 <div class="col-sm-5 col-xs-6 xs-padding">
-                    <h4 class="text-white mb-40">Навигация компании</h4>
+                    <h4 class="text-white mb-40">Навигация по компании</h4>
                     <ul class="list-1 angel mb-20">
-                            <li><a href="#">Главная</a></li>
-                            <li><a href="#">Интерьер Дизайн</a></li>
-                            <li><a href="#">О нас</a></li>
-                            <li><a href="#">Проекты</a></li>
-                            <li><a href="#">Сервисы</a></li>
-                            <li><a href="#">Архитектура</a></li>
-                            <li><a href="#">Конструкция</a></li>
+                            <li><a href="{% url 'index' %}">Главная</a></li>
+                            <li><a href="{% url 'about' %}">О нас</a></li>
+                            <li><a href="{% url 'projects' %}">Недавние Проекты</a></li>
+                            <li><a href="{% url 'services' %}"> Галерея</a></li>
+                            <li><a href="{% url 'blogs' %}">НОВОСТИ</a></li>
+                            <li><a href="{% url 'contact' %}"> СВЯЗЫВАТЬСЯ С НАМИ</a></li>
                         </ul>
                 </div><!-- widget 2 -->
                 <div class="col-sm-3 col-xs-6 xs-padding">
                     <div class="widget-box">
-                        <h4 class="text-white mb-30">Construction Office</h4>
+                        <h4 class="text-white mb-30">{{info.name}}</h4>
                         <ul class="addr-info footer-addr text-light fz-14">
-                            <li>Tottenh Road, London, England.</li>
-                            <li>(102) 6666 8888</li>
-                            <li>info@thememove.com</li>
-                            <li>Mon - Sat: 9:00 - 18:00</li>
+                            <li>{{info.location}}</li>
+                            <li>{{info.phone_uz}}</li>
+                            <li>{{info.phone_ru}}</li>
+                            <li>{{info.email}}</li>
+                            <li>{{info.timetable}}</li>
                         </ul>
                     </div>
                 </div><!-- widget 3 -->
             </div>
         </section><!-- widget-section -->
-        
-        <footer class="footer-section bg-dark text-center bd-top-dark ptb-40 tt-u">
+		
+		<footer class="footer-section bg-dark text-center bd-top-dark ptb-40 tt-u">
             <div class="container">
-                <p class="no-margin fz-13 text-light">&copy; Copyright 2017 Crack Themes - All Rights Reserved</p>
+                <p class="no-margin fz-13 text-light">&copy; Copyright 2024 - All Rights Reserved</p>
             </div>
         </footer><!--  footer section -->
 
