@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -317,19 +318,19 @@
         <a data-scroll href="#header" id="scroll-top" class="scroll-to-top"><i class="ti-angle-up"></i></a>
 
         <!-- All Scripts -->
-        <script src="js/vendor/jquery-1.12.4.min.js"></script>
-        <script src="js/vendor/waypoints.min.js"></script>
-        <script src="js/vendor/wow.min.js"></script>
-        <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="js/vendor/jquery.nicescroll.min.js"></script>
-        <script src="js/vendor/imagesloaded.pkgd.min.js"></script>
-        <script src="js/vendor/owl.carousel.min.js"></script>
-        <script src="js/vendor/jquery.isotope.v3.0.2.js"></script>
-        <script src="js/vendor/smooth-scroll.min.js"></script>
-        <script src="js/vendor/jquery.counterup.min.js"></script>
-        <script src="js/vendor/jquery.swipebox.min.js"></script>
-        <script src="js/vendor/jquery.hoverdir.js"></script>
-        <script src="js/vendor/jquery.slicknav.min.js"></script>
-        <script src="js/main.js"></script>
+        <script src="{% static "js/vendor/jquery-1.12.4.min.js" %}"></script>
+        <script src="{% static "js/vendor/waypoints.min.js" %}"></script>
+        <script src="{% static 'js/vendor/wow.min.js' %}"></script>
+        <script src="{% static "js/vendor/bootstrap.min.js" %}"></script>
+        <script src="{% static "js/vendor/jquery.nicescroll.min.js" %}"></script>
+        <script src="{% static "js/vendor/imagesloaded.pkgd.min.js" %}"></script>
+        <script src="{% static "js/vendor/owl.carousel.min.js" %}"></script>
+        <script src="{% static "js/vendor/jquery.isotope.v3.0.2.js" %}"></script>
+        <script src="{% static "js/vendor/smooth-scroll.min.js" %}"></script>
+        <script src="{% static "js/vendor/jquery.counterup.min.js" %}"></script>
+        <script src="{% static "js/vendor/jquery.swipebox.min.js" %}"></script>
+        <script src="{% static "js/vendor/jquery.hoverdir.js" %}"></script>
+        <script src="{% static "js/vendor/jquery.slicknav.min.js" %}"></script>
+        <script src="{% static "js/vendor/main.js" %}"></script>
     </body>
 </html>

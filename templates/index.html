@@ -45,15 +45,15 @@
                 <div class="container">
                     <div class="col-xs-12 text-right xs-text-center">
                         <ul class="top-info display-inline-block">
-                            <li><i class="ti-headphone-alt"></i> (102) 6666 8888</li>
-                            <li><i class="ti-email"></i> <a href="mailto:info@domain.com">info@domain.com</a></li>
+                            <li><i class="ti-headphone-alt"></i>+998 97 581 23 43</li>
+                            <li><i class="ti-headphone-alt"></i>+79608041333</li>
+                            <li><i class="ti-email"></i> <a href="mailto:info@domain.com">ulugbek.yuldashev.1966@mail.ru</a></li>
                         </ul>
                         <ul class="social-icon-white top-social hidden-xs display-inline-block">
-                            <li><a href="#"><i class="ti-facebook"></i></a></li>
-                            <li><a href="#"><i class="ti-twitter"></i></a></li>
-                            <li><a href="#"><i class="ti-google"></i></a></li>
-                            <li><a href="#"><i class="ti-pinterest"></i></a></li>
-                            <li><a href="#"><i class="ti-instagram"></i></a></li>
+                            <li><a href="www.facebook.com"><i class="ti-facebook"></i></a></li>
+                            <li><a href="www.twitter.com"><i class="ti-twitter"></i></a></li>
+                            <li><a href="www.google.com"><i class="ti-google"></i></a></li>
+                            <li><a href="www.instagram.com"><i class="ti-instagram"></i></a></li>
                         </ul>
                     </div>
                 </div>
@@ -67,53 +67,29 @@
                     </div>
                     <div class="col-sm-9 hidden-xs">
                         <div class="pull-right">
-                            <a href="#" class="b-nav-btn">Book Us</a>
+                            <a href="#" class="b-nav-btn">ЗАКАЗАТЬ</a>
                         </div>
                         
                         <nav class="mainmenu pull-right">
                             <ul id="navi-menu">
-                                <li class="current_page_item"><a href="{% url 'index' %}">Home</a>
-                                    <ul>
-                                        <li><a href="{% url 'index' %}">Home Default</a></li>
-                                        <li><a href="{% url 'index-dark' %}">Home Dark</a></li>
-                                        <li><a href="index-light.html">Home Light</a></li>
-                                    </ul>
+                                <li class="current_page_item"><a href="{% url 'index' %}">Главная</a>
                                 </li>
-                                <li><a href="about.html">About us</a>
-                                    <ul>
-                                        <li><a href="about.html">About us</a></li>
-                                        <li><a href="about-light.html">About Light</a></li>
-                                        <li><a href="about-dark.html">About Dark</a></li>
-                                    </ul>
+                                <li><a href="{% url 'about' %}">О нас</a>
                                 </li>
-                                <li><a href="service.html">Services</a>
-                                    <ul>
-                                        <li><a href="service.html">Services</a></li>
-                                        <li><a href="service-light.html">Service Light</a></li>
-                                        <li><a href="service-dark.html">Service Dark</a></li>
-                                    </ul>
+                                <li><a href="{% url 'services' %}">Сервисы</a>
                                 </li>
-                                <li><a href="project-3-col.html">Projects</a>
+                                <li><a href="{% url 'projects' %}">Проекты</a>
                                     <ul>
-                                        <li><a href="project-3-col.html">Projects 3 Col</a></li>
-                                        <li><a href="project-2-col.html">Projects 2 Col</a></li>
+                                        <li><a href="{% url 'projects' %}">Projects 3 Col</a></li>
                                         <li><a href="project-details.html">Projects Details</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="blog-sidebar-right.html">Blog</a>
+                                <li><a href="{% url 'blogs' %}">Новости</a>
                                     <ul>
-                                        <li><a href="blog-sidebar-right.html">Blog Sidebar Right</a></li>
-                                        <li><a href="blog-sidebar-left.html">Blog Sidebar Left</a></li>
-                                        <li><a href="blog-full-width.html">Blog Full Width</a></li>
-                                        <li><a href="blog-single-right.html">Blog Single Right</a></li>
-                                        <li><a href="blog-single-left.html">Blog Single Left</a></li>
+                                        <li><a href="{% url 'blogs' %}">Blog Sidebar Right</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="contact.html">Contact Us</a>
-                                    <ul>
-                                        <li><a href="contact.html">Contact Us</a></li>
-                                        <li><a href="contact-with-map.html">Contact With Map</a></li>
-                                    </ul>
+                                <li><a href="{% url 'contact' %}">Связываться с нами</a>
                                 </li>
                             </ul>
                         </nav>
@@ -132,8 +108,7 @@
                                     <h1 class="fz-45 text-white fw-8 tt-u">ТУРАКУРГАНСКИЙ МЕХАНИЧЕСКИЙ ЗАВОД</h1>
                                     <p class="text-white mb-20 xs-br-none fz-16">Мы предлагаем бесплатные консультации и лучшее управление проектами <br> для ваших идей, 100% гарантия реализации.</p>
                                     <div class="btn-group-left">
-                                        <a href="#" class="b-btn">Learn More</a>
-                                        <a href="#" class="b-btn">Get It Now</a>
+                                        <a href="{% static 'Document.png' %}" class="b-btn">Узнать больше</a>
                                     </div>
                                 </div>
                             </div>
@@ -179,19 +154,20 @@
             <div class="container">
                 <div class="col-sm-7 xs-padding wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1000ms">
                     <div class="entry-content sm-no-padding ptb-30">
-                        <h2 class="mb-20">WE ARE THE EXPERT ON THIS FIELD <br>
-                            BETTER BUILDING SOLUTIONS SINCE 1984.</h2>
-                        <p class="fz-14">We are committed to building a sustainable future by fostering a collaborative spirit  that creates exceptional experiences, balanced relationships, and enhances a community’s built environment.</p>
+                        <h2 class="mb-20">МЫ ЭКСПЕРТ В ЭТОЙ ОБЛАСТИ<br>
+                            ЛУЧШИЕ СТРОИТЕЛЬНЫЕ РЕШЕНИЯ С 1984 ГОДА.</h2>
+                        <p class="fz-14">Мы стремимся построить устойчивое будущее, поощряя дух сотрудничества, который создает исключительный опыт, сбалансированные отношения и улучшает созданную среду сообщества.</p>
                     </div>
                 </div>
                 <div class="col-sm-5 xs-padding wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
                     <div class="content-box bg-yellow padding-40">
-                        <h4 class="text-white pb-5 bd-bottom-white">Construction Office</h4>
+                        <h4 class="text-white pb-5 bd-bottom-white">ТУРАКУРГАНСКИЙ МЕХАНИЧЕСКИЙ ЗАВОД</h4>
                         <ul class="addr-info text-white fz-13">
-                            <li>4 Tottenham Road, London, England.</li>
-                            <li>(102) 6666 8888</li>
-                            <li>info@thememove.com</li>
-                            <li>Mon - Sat: 9:00 - 18:00</li>
+                            <li>Шохизинда 62 Хартум МФЙ</li>
+                            <li>+998 97 581 23 43</li>
+                            <li>+79608041333</li>
+                            <li>ulugbek.yuldashev.1966@mail.ru</li>
+                            <li>С Пон до Суб: 09:00 - 18:00 </li>
                         </ul>
                     </div>
                 </div>
@@ -206,9 +182,8 @@
                             <i class="ct ct-construct-2 fz-60">
                             <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span>
                             </i>
-							<h4 class="fw-7">ARCHITECTURE</h4>
-							<p class="fz-13">A general term to describe buildings and other physical structures.</p>
-							<a href="#" class="read-more fz-12 tt-u">Read More</a>
+							<h4 class="fw-7">АРХИТЕКТУРА</h4>
+							<p class="fz-13">Общий термин для описания зданий и других физических сооружений.</p>
 						</div>
 					</li>
 					<li class="col-md-4 col-xs-6 ptb-15 wow zoomIn" data-wow-delay="0ms" data-wow-duration="1000ms">
@@ -216,8 +191,8 @@
 							<i class="ct ct-loader fz-60">
                             <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span>
                             </i>
-							<h4 class="fw-7">BUILDING RENOVATION</h4>
-							<p class="fz-13">The renovation process can usually be broken down into several processes:</p>
+							<h4 class="fw-7">ДЕТАЛИ</h4>
+							<p class="fz-13">Процесс ремонта обычно можно разбить на несколько этапов:</p>
 							<a href="#" class="read-more fz-12 tt-u">Read More</a>
 						</div>
 					</li>
@@ -226,9 +201,8 @@
 							<i class="ct ct-technology fz-60">
                             <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span>
                             </i>
-							<h4 class="fw-7">CONSULTING</h4>
-							<p class="fz-13">The range of areas of expertise covered by the term consultant is wide</p>
-							<a href="#" class="read-more fz-12 tt-u">Read More</a>
+							<h4 class="fw-7">КОНСАЛТИНГ</h4>
+							<p class="fz-13">Спектр областей знаний, охватываемых термином «консультант», широк.</p>
 						</div>
 					</li>
 					<li class="col-md-4 col-xs-6 ptb-15 wow zoomIn" data-wow-delay="0ms" data-wow-duration="1000ms">
@@ -236,9 +210,8 @@
 							<i class="ct ct-construct fz-60">
                             <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span>
                             </i>
-							<h4 class="fw-7">CONSTRUCTION</h4>
-							<p class="fz-13">Construction is the process of constructing a building or infrastructure</p>
-							<a href="#" class="read-more fz-12 tt-u">Read More</a>
+							<h4 class="fw-7">СТРОИТЕЛЬСТВО</h4>
+							<p class="fz-13">Строительство – это процесс возведения здания или инфраструктуры.</p>
 						</div>
 					</li>
 					<li class="col-md-4 col-xs-6 ptb-15 wow zoomIn" data-wow-delay="0ms" data-wow-duration="1000ms">
@@ -246,9 +219,8 @@
 							<i class="ct ct-construct-3 fz-60">
                             <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span>
                             </i>
-							<h4 class="fw-7">INTERIOR DESIGN</h4>
-							<p class="fz-13">Interior design is the art and science of enhancing the interiors. </p>
-							<a href="#" class="read-more fz-12 tt-u">Read More</a>
+							<h4 class="fw-7">ДИЗАЙН ИНТЕРЬЕРА</h4>
+							<p class="fz-13">Дизайн интерьера – это искусство и наука улучшения интерьера. </p>
 						</div>
 					</li>
 					<li class="col-md-4 col-xs-6 ptb-15 wow zoomIn" data-wow-delay="0ms" data-wow-duration="1000ms">
@@ -256,9 +228,8 @@
 							<i class="ct ct-crane fz-60">
                             <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span>
                             </i>
-							<h4 class="fw-7">CONCRETE TRANSPORT</h4>
-							<p class="fz-13">A variant concrete transportation is the concrete or cement mixing trailer.</p>
-							<a href="#" class="read-more fz-12 tt-u">Read More</a>
+							<h4 class="fw-7">БЕТОННЫЙ ТРАНСПОРТ</h4>
+							<p class="fz-13">Вариантом перевозки бетона является бетоносмеситель или бетоносмеситель.</p>
 						</div>
 					</li>
 				</ul>
@@ -269,14 +240,14 @@
             <div class="container">
                 <div class="row mb-40">
                     <div class="col-sm-6 xs-padding">
-                        <h2 class="fw-7">CONSTRUCTION RECENT PROJECTS</h2>
+                        <h2 class="fw-7">ПОСЛЕДНИЕ ПРОЕКТЫ В СТРОИТЕЛЬСТВЕ </h2>
                     </div>
                     <div class="col-sm-6 xs-padding">
                         <ul class="filter-menu text-right xs-text-center">
-                            <li class="active" data-filter="*">All Projects</li>
-                            <li data-filter=".architecture"> Architecture</li>
-                            <li data-filter=".construction"> Construction</li>
-                            <li data-filter=".interior"> Interior Design</li>
+                            <li class="active" data-filter="*">Все проекты</li>
+                            <li data-filter=".architecture">АРХИТЕКТУРА</li>
+                            <li data-filter=".construction"> СТРОИТЕЛЬСТВО</li>
+                            <li data-filter=".interior"> ДИЗАЙН ИНТЕРЬЕРА</li>
                         </ul><!-- /.filter-menu -->
                     </div>
                 </div>
@@ -287,8 +258,8 @@
                             <a href="{% static 'img/project-2.jpg' %}" class="overlay lightbox text-center">
                                 <div class="display-table">
                                     <div class="table-cell padding-15">
-                                        <h4 class="mb-10 fz-16 text-white display-inline-block padding-25 ptb-15 bg-yellow">Interior Design</h4>
-                                        <p class="no-margin fz-14">Interior Design is the definitive resource for interior designers</p>
+                                        <h4 class="mb-10 fz-16 text-white display-inline-block padding-25 ptb-15 bg-yellow">ДИЗАЙН ИНТЕРЬЕРА</h4>
+                                        <p class="no-margin fz-14">«Дизайн интерьера» — незаменимый ресурс для дизайнеров интерьеров.</p>
                                     </div>
                                 </div>
                             </a>
@@ -476,7 +447,7 @@
             </div>
         </section><!-- blog-section -->
         
-        <div class="partner-block ptb-40">
+        {% comment %} <div class="partner-block ptb-40">
             <div class="container">
                 <div class="col-sm-2 col-xs-4">     
                     <div class="brand-item padding-10">
@@ -539,7 +510,7 @@
                     </div>
                 </div>
             </div>
-        </div><!-- partner block -->
+        </div><!-- partner block --> {% endcomment %}
         
         <section class="cta-section text-center bg-yellow ptb-40">
             <div class="container">

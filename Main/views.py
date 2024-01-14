@@ -22,5 +22,22 @@ def Index(request):
     # }
     return render(request, 'index.html')
 
-def Index_Dark(request):
-    return render(request, 'index-dark.html')
+def About(request):
+    
+    return render(request, 'about.html')
+
+def Service(request):
+    
+    return render(request, 'service.html')
+
+def Project(request):
+    
+    return render(request, 'project-3-col.html')
+
+def Blogs(request):
+    
+    return render(request, 'blog-sidebar-right.html')
+
+def Contact(request):
+    
+    return render(request, 'contact.html')

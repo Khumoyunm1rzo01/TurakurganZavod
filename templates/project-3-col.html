@@ -1,3 +1,4 @@
+{% load static %}
 <!doctype html>
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
@@ -11,31 +12,20 @@
         <title>Construction - Ultimate Responsive Construction Template</title>
         
         <!-- Favicon -->
-        <link rel="shortcut icon" type="image/x-icon" href="img/favicon.png">
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
 
-        <!--  construct Icon CSS -->
-        <link rel="stylesheet" href="css/construct-icons.css">
-        <!-- themify Icon CSS -->
-        <link rel="stylesheet" href="css/themify-icons.css">
-        <!-- Animate CSS -->
-        <link rel="stylesheet" href="css/animate.min.css">
-        <!-- Elegant Icons CSS -->
-        <link rel="stylesheet" href="css/elegant-line-icons.css">
-        <!-- Bootsrtap CSS -->
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <!-- Owl Carousel CSS -->
-        <link rel="stylesheet" href="css/owl.carousel.min.css">
-        <!-- Slick Nav CSS -->
-        <link rel="stylesheet" href="css/slicknav.min.css">
-        <!-- Swipebox CSS -->
-        <link rel="stylesheet" href="css/swipebox.min.css">
-        
-        <!-- Theme CSS -->
-        <link rel="stylesheet" href="css/base.css">
-        <link rel="stylesheet" href="css/main.css">
-        <link rel="stylesheet" href="css/responsive.css">
-
-        <script src="js/vendor/modernizr-2.8.3.min.js"></script>
+        <link rel="stylesheet" href="{% static 'css/construct-icons.css' %}">
+        <link rel="stylesheet" href="{% static 'css/themify-icons.css'%}">
+        <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/elegant-line-icons.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/swipebox.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+        <script src="{% static 'js/vendor/modernizr-2.8.3.min.js' %}"></script>
     </head>
     <body data-spy="scroll" data-target="#navbar" data-offset="60">
         <!--[if lt IE 8]>
@@ -64,7 +54,7 @@
                 <div class="container">
                     <div class="col-sm-3">
                         <div class="navbar-header">
-                            <a href="#" class="brand"><img src="img/logo-light.png" alt="Construction"></a>
+                            <a href="#" class="brand"><img src="{% static 'img/logo-light.png' %}" alt="Construction"></a>
                         </div>
                     </div>
                     <div class="col-sm-9 hidden-xs">
@@ -73,48 +63,24 @@
                         </div>
                         <nav class="mainmenu pull-right">
                             <ul id="navi-menu">
-                                <li class="current_page_item"><a href="index.html">Home</a>
-                                    <ul>
-                                        <li><a href="index.html">Home Default</a></li>
-                                        <li><a href="index-dark.html">Home Dark</a></li>
-                                        <li><a href="index-light.html">Home Light</a></li>
-                                    </ul>
+                                <li class="current_page_item"><a href="{% url 'index' %}">Главная</a>
                                 </li>
-                                <li><a href="about.html">About us</a>
-                                    <ul>
-                                        <li><a href="about.html">About us</a></li>
-                                        <li><a href="about-light.html">About Light</a></li>
-                                        <li><a href="about-dark.html">About Dark</a></li>
-                                    </ul>
+                                <li><a href="{% url 'about' %}">О нас</a>
                                 </li>
-                                <li><a href="service.html">Services</a>
-                                    <ul>
-                                        <li><a href="service.html">Services</a></li>
-                                        <li><a href="service-light.html">Service Light</a></li>
-                                        <li><a href="service-dark.html">Service Dark</a></li>
-                                    </ul>
+                                <li><a href="{% url 'services' %}">Сервисы</a>
                                 </li>
-                                <li><a href="project-3-col.html">Projects</a>
+                                <li><a href="{% url 'projects' %}">Проекты</a>
                                     <ul>
-                                        <li><a href="project-3-col.html">Projects 3 Col</a></li>
-                                        <li><a href="project-2-col.html">Projects 2 Col</a></li>
+                                        <li><a href="{% url 'projects' %}">Projects 3 Col</a></li>
                                         <li><a href="project-details.html">Projects Details</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="blog-sidebar-right.html">Blog</a>
+                                <li><a href="{% url 'blogs' %}">Новости</a>
                                     <ul>
-                                        <li><a href="blog-sidebar-right.html">Blog Sidebar Right</a></li>
-                                        <li><a href="blog-sidebar-left.html">Blog Sidebar Left</a></li>
-                                        <li><a href="blog-full-width.html">Blog Full Width</a></li>
-                                        <li><a href="blog-single-right.html">Blog Single Right</a></li>
-                                        <li><a href="blog-single-left.html">Blog Single Left</a></li>
+                                        <li><a href="{% url 'blogs' %}">Blog Sidebar Right</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="contact.html">Contact Us</a>
-                                    <ul>
-                                        <li><a href="contact.html">Contact Us</a></li>
-                                        <li><a href="contact-with-map.html">Contact With Map</a></li>
-                                    </ul>
+                                <li><a href="{% url 'contact' %}">Связываться с нами</a>
                                 </li>
                             </ul>
                         </nav>
@@ -123,7 +89,7 @@
             </div>
         </header> <!-- Header -->
         
-        <section class="page-heading height-500" style="background-image: url(img/project-hero.jpg)">
+        <section class="page-heading height-500" style="background-image: url({% static 'img/project-hero.jpg' %})">
             <div class="display-table">
                 <div class="table-cell">
                     <div class="container">
@@ -156,7 +122,7 @@
                 <div class="portfolio-items filter-items row">
                     <div class="col-sm-4 col-xs-6 single-item padding-10 architecture">
                         <div class="portfolio-box">
-                            <img class="img-w1" src="img/project-1.jpg" alt="Portfolio Image">
+                            <img class="img-w1" src="{% static 'img/project-1.jpg' %}" alt="Portfolio Image">
                             <a href="project-details.html" class="overlay text-center">
                                 <div class="display-table">
                                     <div class="table-cell">
@@ -169,7 +135,7 @@
                     </div>
                     <div class="col-sm-4 col-xs-6 single-item padding-10 construction">
                         <div class="portfolio-box">
-                            <img class="img-w1" src="img/project-2.jpg" alt="Portfolio Image">
+                            <img class="img-w1" src="{% static 'img/project-2.jpg' %}" alt="Portfolio Image">
                             <a href="project-details.html" class="overlay text-center">
                                 <div class="display-table">
                                     <div class="table-cell">
@@ -182,7 +148,7 @@
                     </div>
                     <div class="col-sm-4 col-xs-6 single-item padding-10 architecture">
                         <div class="portfolio-box">
-                            <img class="img-w1" src="img/project-3.jpg" alt="Portfolio Image">
+                            <img class="img-w1" src="{% static 'img/project-3.jpg' %}" alt="Portfolio Image">
                             <a href="project-details.html" class="overlay text-center">
                                 <div class="display-table">
                                     <div class="table-cell">
@@ -195,7 +161,7 @@
                     </div>
                     <div class="col-sm-4 col-xs-6 single-item padding-10 construction">
                         <div class="portfolio-box">
-                            <img class="img-w1" src="img/project-4.jpg" alt="Portfolio Image">
+                            <img class="img-w1" src="{% static 'img/project-4.jpg' %}" alt="Portfolio Image">
                             <a href="project-details.html" class="overlay text-center">
                                 <div class="display-table">
                                     <div class="table-cell">
@@ -208,7 +174,7 @@
                     </div>
                     <div class="col-sm-4 col-xs-6 single-item padding-10 architecture">
                         <div class="portfolio-box">
-                            <img class="img-w1" src="img/project-5.jpg" alt="Portfolio Image">
+                            <img class="img-w1" src="{% static 'img/project-5.jpg' %}" alt="Portfolio Image">
                             <a href="project-details.html" class="overlay text-center">
                                 <div class="display-table">
                                     <div class="table-cell">
@@ -221,7 +187,7 @@
                     </div>
                     <div class="col-sm-4 col-xs-6 single-item padding-10 Interior">
                         <div class="portfolio-box">
-                            <img class="img-w1" src="img/project-6.jpg" alt="Portfolio Image">
+                            <img class="img-w1" src="{% static 'img/project-6.jpg' %}" alt="Portfolio Image">
                             <a href="project-details.html" class="overlay text-center">
                                 <div class="display-table">
                                     <div class="table-cell">
@@ -236,7 +202,7 @@
             </div>
         </section><!-- portfolio-section -->
         
-        <section class="cta-section bg-img height-500" style="background-image: url(img/cta-bg.jpg)">
+        <section class="cta-section bg-img height-500" style="background-image: url({% static 'img/cta-bg.jpg' %})">
             <div class="display-table">
                 <div class="table-cell">
                     <div class="container">
@@ -261,7 +227,7 @@
             <div class="container">
                 <div class="col-sm-4 col-xs-6 xs-padding">
                     <div class="widget-box">
-                        <img class="mb-15" src="img/logo-light.png" alt="Construction">
+                        <img class="mb-15" src="{% static 'img/logo-light.png' %}" alt="Construction">
                         <h4 class="text-light mb-25">Ultimate design for your websites</h4>
                         <p class="fz-13 mb-25 text-light">Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days.</p>
                     </div>
@@ -302,19 +268,19 @@
         <a data-scroll href="#header" id="scroll-top" class="scroll-to-top"><i class="ti-angle-up"></i></a>
 
         <!-- All Scripts -->
-        <script src="js/vendor/jquery-1.12.4.min.js"></script>
-        <script src="js/vendor/waypoints.min.js"></script>
-        <script src="js/vendor/wow.min.js"></script>
-        <script src="js/vendor/bootstrap.min.js"></script>
-        <script src="js/vendor/jquery.nicescroll.min.js"></script>
-        <script src="js/vendor/imagesloaded.pkgd.min.js"></script>
-        <script src="js/vendor/owl.carousel.min.js"></script>
-        <script src="js/vendor/jquery.isotope.v3.0.2.js"></script>
-        <script src="js/vendor/smooth-scroll.min.js"></script>
-        <script src="js/vendor/jquery.counterup.min.js"></script>
-        <script src="js/vendor/jquery.swipebox.min.js"></script>
-        <script src="js/vendor/jquery.hoverdir.js"></script>
-        <script src="js/vendor/jquery.slicknav.min.js"></script>
-        <script src="js/main.js"></script>
+        <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+        <script src="{% static 'js/vendor/waypoints.min.js' %}"></script>
+        <script src="{% static 'js/vendor/wow.min.js' %}"></script>
+        <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/vendor/jquery.nicescroll.min.js' %}"></script>
+        <script src="{% static 'js/vendor/imagesloaded.pkgd.min.js' %}"></script>
+        <script src="{% static 'js/vendor/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'js/vendor/jquery.isotope.v3.0.2.js' %}"></script>
+        <script src="{% static 'js/vendor/smooth-scroll.min.js' %}"></script>
+        <script src="{% static 'js/vendor/jquery.counterup.min.js' %}"></script>
+        <script src="{% static 'js/vendor/jquery.swipebox.min.js' %}"></script>
+        <script src="{% static 'js/vendor/jquery.hoverdir.js' %}"></script>
+        <script src="{% static 'js/vendor/jquery.slicknav.min.js' %}"></script>
+        <script src="{% static 'js/vendor/main.js' %}"></script>
     </body>
 </html>

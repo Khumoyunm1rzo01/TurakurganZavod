@@ -3,5 +3,9 @@ from .views import *
 
 urlpatterns = [
     path('', Index, name='index'),
-    path('index-dark/', Index_Dark, name='index-dark')
+    path('about/', About, name='about'),
+    path('services/', Service, name='services'),
+    path('projects/', Project, name='projects'),
+    path('blogs/', Blogs, name='blogs'),
+    path('contact/', Contact, name='contact'),
 ]
