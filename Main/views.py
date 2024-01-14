@@ -38,6 +38,10 @@ def Blogs(request):
     
     return render(request, 'blog-sidebar-right.html')
 
+def BlogsFull(request):
+    
+    return render(request, 'blog-full-width.html')
+
 def Contact(request):
     
     return render(request, 'contact.html')

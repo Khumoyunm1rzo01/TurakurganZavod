@@ -7,5 +7,6 @@ urlpatterns = [
     path('services/', Service, name='services'),
     path('projects/', Project, name='projects'),
     path('blogs/', Blogs, name='blogs'),
+    path('blogs/full/', BlogsFull, name='blogs'),
     path('contact/', Contact, name='contact'),
 ]
