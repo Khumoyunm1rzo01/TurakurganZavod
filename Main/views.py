@@ -35,8 +35,12 @@ def About(request):
     return render(request, 'about.html', context)
 
 def Service(request):
-    
-    return render(request, 'service.html')
+    bg = Background_Img.objects.last()
+
+    context = {
+        'bg': bg
+    }
+    return render(request, 'service.html', context)
 
 def Project(request):
     
