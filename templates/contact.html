@@ -64,48 +64,23 @@
                         </div>
                         <nav class="mainmenu pull-right">
                             <ul id="navi-menu">
-                                <li class="current_page_item"><a href="index.html">Home</a>
+                                <li class="current_page_item"><a href="{% url 'index' %}">Главная</a>
+                                </li>
+                                <li><a href="{% url 'about' %}">О нас</a>
+                                </li>
+                                <li><a href="{% url 'services' %}">Сервисы</a>
+                                </li>
+                                <li><a href="{% url 'projects' %}">Проекты</a>
                                     <ul>
-                                        <li><a href="index.html">Home Default</a></li>
-                                        <li><a href="index-dark.html">Home Dark</a></li>
-                                        <li><a href="index-light.html">Home Light</a></li>
+                                        <li><a href="{% url 'projects' %}">Проекты</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="about.html">About us</a>
+                                <li><a href="{% url 'blogs' %}">Новости</a>
                                     <ul>
-                                        <li><a href="about.html">About us</a></li>
-                                        <li><a href="about-light.html">About Light</a></li>
-                                        <li><a href="about-dark.html">About Dark</a></li>
+                                        <li><a href="{% url 'blogs' %}">Blog Sidebar Right</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="service.html">Services</a>
-                                    <ul>
-                                        <li><a href="service.html">Services</a></li>
-                                        <li><a href="service-light.html">Service Light</a></li>
-                                        <li><a href="service-dark.html">Service Dark</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="project-3-col.html">Projects</a>
-                                    <ul>
-                                        <li><a href="project-3-col.html">Projects 3 Col</a></li>
-                                        <li><a href="project-2-col.html">Projects 2 Col</a></li>
-                                        <li><a href="project-details.html">Projects Details</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="blog-sidebar-right.html">Blog</a>
-                                    <ul>
-                                        <li><a href="blog-sidebar-right.html">Blog Sidebar Right</a></li>
-                                        <li><a href="blog-sidebar-left.html">Blog Sidebar Left</a></li>
-                                        <li><a href="blog-full-width.html">Blog Full Width</a></li>
-                                        <li><a href="blog-single-right.html">Blog Single Right</a></li>
-                                        <li><a href="blog-single-left.html">Blog Single Left</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="contact.html">Contact Us</a>
-                                    <ul>
-                                        <li><a href="contact.html">Contact Us</a></li>
-                                        <li><a href="contact-with-map.html">Contact With Map</a></li>
-                                    </ul>
+                                <li><a href="{% url 'contact' %}">Связываться с нами</a>
                                 </li>
                             </ul>
                         </nav>
