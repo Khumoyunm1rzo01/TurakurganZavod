@@ -91,13 +91,14 @@
             </div>
         </header> <!-- Header -->
         
-        <section class="page-heading bg-img height-500" style="background-image: url({% static 'img/news-hero.jpg' %})">
+        <section class="page-heading bg-img height-500" style="background-image: url({{bg.img.url}})">
             <div class="display-table">
                 <div class="table-cell">
                     <div class="container">
                         <div class="hero-content">
-                            <h2 class="fz-40 text-white fw-8 mb-15">CONSTRUCTION NEWS</h2>
-                            <p class="text-white fz-16">We offer free consulting and the best project management <br>for your ideas, 100% delivery guaranteed.</p>
+                            <h2 class="fz-40 text-white fw-8 mb-15">Наши новости</h2>
+                            <p class="text-white fz-16">Мы предлагаем бесплатную консультацию и лучшее управление проектами
+                                для ваших идей 100% гарантия доставки.</p>
                         </div>
                     </div>
                 </div>
@@ -108,125 +109,69 @@
             <div class="container">
                 <div class="col-sm-12">
                     <div class="blog-wrapper ov-hidden mb-30">
+                        {% for i in product %}
                         <div class="col-sm-4 col-xs-6 padding-15">
                             <div class="article-box">
-                                <img src="{% static 'img/news-1.jpg' %}" class="img-w1" alt="Blog-image">
+                                <img src="{{i.img.url}}" class="img-w1" alt="Blog-image">
                                 <div class="entry-content mt-15">
-                                    <h4>USING THE RIGHT MATERIALS.</h4>
-                                    <p class="fz-13">Learn about the best paper and materials to use for physical records and what not to use.</p>
-                                    <a href="#" class="read-more fz-12 tt-u">Read More</a>
+                                    <h4>{{i.name}}</h4>
+                                    <p class="fz-13">{{i.description}}</p>
                                 </div>
                             </div>
                         </div><!-- blog 1 -->
-                        <div class="col-sm-4 col-xs-6 padding-15">
-                            <div class="article-box">
-                                <img src="{% static 'img/news-2.jpg' %}" class="img-w1" alt="Blog-image">
-                                <div class="entry-content mt-15">
-                                    <h4>DIGITAL TOOLS FOR YOUR BUSINESS.</h4>
-                                    <p class="fz-13">Digital tools can help your business grow by finding more customers, reaching new markets.</p>
-                                    <a href="#" class="read-more fz-12 tt-u">Read More</a>
-                                </div>
-                            </div>
-                        </div><!-- blog 2 -->
-                        <div class="col-sm-4 col-xs-6 padding-15">
-                            <div class="article-box">
-                                <img src="{% static 'img/news-3.jpg' %}" class="img-w1" alt="Blog-image">
-                                <div class="entry-content mt-15">
-                                    <h4>CHOSSING THE RIGHT ARCHITECT.</h4>
-                                    <p class="fz-13">Ultimately you want to find the architect . don't feel limited to choosing your community.</p>
-                                    <a href="#" class="read-more fz-12 tt-u">Read More</a>
-                                </div>
-                            </div>
-                        </div><!-- blog 3 -->
-                        <div class="col-sm-4 col-xs-6 padding-15">
-                            <div class="article-box">
-                                <img src="{% static 'img/news-4.jpg' %}" class="img-w1" alt="Blog-image">
-                                <div class="entry-content mt-15">
-                                    <h4>FROM GROUND UP BUILDING.</h4>
-                                    <p class="fz-13">Learn about the best paper and materials to use for physical records and what not to use.</p>
-                                    <a href="#" class="read-more fz-12 tt-u">Read More</a>
-                                </div>
-                            </div>
-                        </div><!-- blog 1 -->
-                        <div class="col-sm-4 col-xs-6 padding-15">
-                            <div class="article-box">
-                                <img src="{% static 'img/news-5.jpg' %}" class="img-w1" alt="Blog-image">
-                                <div class="entry-content mt-15">
-                                    <h4>HARD LABOUR IN CONSTRUCTION.</h4>
-                                    <p class="fz-13">Digital tools can help your business grow by finding more customers, reaching new markets.</p>
-                                    <a href="#" class="read-more fz-12 tt-u">Read More</a>
-                                </div>
-                            </div>
-                        </div><!-- blog 2 -->
-                        <div class="col-sm-4 col-xs-6 padding-15">
-                            <div class="article-box">
-                                <img src="{% static 'img/news-6.jpg' %}" class="img-w1" alt="Blog-image">
-                                <div class="entry-content mt-15">
-                                    <h4>STARTING CAREER WITH CONSTRUCTION.</h4>
-                                    <p class="fz-13">Ultimately you want to find the architect . don't feel limited to choosing your community.</p>
-                                    <a href="#" class="read-more fz-12 tt-u">Read More</a>
-                                </div>
-                            </div>
-                        </div><!-- blog 3 -->
+                        {% endfor %}
                     </div>
                     
-                    <ul class="pagination-wrap text-center">
-                        <li><a href="#"><i class="ti-arrow-left"></i></a></li>
-                        <li><a href="#">1</a></li>
-                        <li><a href="#" class="active">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#"><i class="ti-arrow-right"></i></a></li>
-                    </ul>
+                   
                 </div><!-- Blog Wrapper -->
             </div>
         </section><!-- blog-posts-section -->
 
         <section class="cta-section text-center bg-yellow ptb-40">
             <div class="container">
-                <h2 class="text-white fz-18 no-margin display-inline-block">GET YOUR FREE CONSULTING AND ESTIMATE FOR YOUR PROJECT</h2>
-                <a href="#" class="b-btn btn-white btn-border ml-15">Explore</a>
+                <h2 class="text-white fz-18 no-margin display-inline-block">ПОЛУЧИТЕ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ И СМЕТУ ДЛЯ ВАШЕГО ПРОЕКТА</h2>
+                <a href="{% url 'contact' %}" class="b-btn btn-white btn-border ml-15">Связаться</a>
             </div>
         </section><!-- cta-section -->
         
-        <section class="widget-section bd-top-dark padding bg-dark">
+		<section class="widget-section bd-top-dark padding bg-dark">
             <div class="container">
                 <div class="col-sm-4 col-xs-6 xs-padding">
                     <div class="widget-box">
-                        <img class="mb-15" src="{% static 'img/logo-light.png' %}" alt="Construction">
-                        <h4 class="text-light mb-25">Ultimate design for your websites</h4>
-                        <p class="fz-13 mb-25 text-light">Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days.</p>
+                        <img class="mb-15" src="{{info.logo.url}}" alt="Construction">
+                        <h4 class="text-light mb-25">Превосходный продукт для вашего строительства</h4>
+                        <p class="fz-13 mb-25 text-light">Позвоните нам или зайдите в любое время, мы постараемся ответить на все запросы в течение 24 часов в рабочие дни.</p>
                     </div>
                 </div><!-- widget 1 -->
                 <div class="col-sm-5 col-xs-6 xs-padding">
-                    <h4 class="text-white mb-40">Company navigation</h4>
+                    <h4 class="text-white mb-40">Навигация по компании</h4>
                     <ul class="list-1 angel mb-20">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Interior Design</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Recent Projects</a></li>
-                            <li><a href="#">Service</a></li>
-                            <li><a href="#">Architecture</a></li>
-                            <li><a href="#">Construction</a></li>
-                            <li><a href="#">Building Renovation</a></li>
+                            <li><a href="{% url 'index' %}">Главная</a></li>
+                            <li><a href="{% url 'about' %}">О нас</a></li>
+                            <li><a href="{% url 'projects' %}">Недавние Проекты</a></li>
+                            <li><a href="{% url 'services' %}"> Галерея</a></li>
+                            <li><a href="{% url 'blogs' %}">НОВОСТИ</a></li>
+                            <li><a href="{% url 'contact' %}"> СВЯЗЫВАТЬСЯ С НАМИ</a></li>
                         </ul>
                 </div><!-- widget 2 -->
                 <div class="col-sm-3 col-xs-6 xs-padding">
                     <div class="widget-box">
-                        <h4 class="text-white mb-30">Construction Office</h4>
+                        <h4 class="text-white mb-30">{{info.name}}</h4>
                         <ul class="addr-info footer-addr text-light fz-14">
-                            <li>Tottenh Road, London, England.</li>
-                            <li>(102) 6666 8888</li>
-                            <li>info@thememove.com</li>
-                            <li>Mon - Sat: 9:00 - 18:00</li>
+                            <li>{{info.location}}</li>
+                            <li>{{info.phone_uz}}</li>
+                            <li>{{info.phone_ru}}</li>
+                            <li>{{info.email}}</li>
+                            <li>{{info.timetable}}</li>
                         </ul>
                     </div>
                 </div><!-- widget 3 -->
             </div>
         </section><!-- widget-section -->
-        
-        <footer class="footer-section bg-dark text-center bd-top-dark ptb-40 tt-u">
+		
+		<footer class="footer-section bg-dark text-center bd-top-dark ptb-40 tt-u">
             <div class="container">
-                <p class="no-margin fz-13 text-light">&copy; Copyright 2017 Crack Themes - All Rights Reserved</p>
+                <p class="no-margin fz-13 text-light">&copy; Copyright 2024 - All Rights Reserved</p>
             </div>
         </footer><!--  footer section -->
 
