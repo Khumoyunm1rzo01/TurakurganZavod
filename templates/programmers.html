@@ -1,0 +1,302 @@
+{% load static %}
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7" lang=""> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8" lang=""> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9" lang=""> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="Construction is ultimate responsive construction html template which include 3 homepage demos.">
+        <title>ТУРАКУРГАНСКИЙ МЕХАНИЧЕСКИЙ ЗАВОД ПО ЛИТЬЁ</title>
+        
+        <!-- Favicon -->
+        <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
+
+        <link rel="stylesheet" href="{% static 'css/construct-icons.css' %}">
+        <link rel="stylesheet" href="{% static 'css/themify-icons.css' %}">
+        <link rel="stylesheet" href="{% static 'css/animate.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/elegant-line-icons.css' %}">
+        <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/owl.carousel.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/slicknav.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/swipebox.min.css' %}">
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
+        <link rel="stylesheet" href="{% static 'css/main.css' %}">
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+
+        <script src="{% static 'js/vendor/modernizr-2.8.3.min.js' %}"></script>
+    </head>
+    <body data-spy="scroll" data-target="#navbar" data-offset="60">
+        <!--[if lt IE 8]>
+            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        
+        <header id="header" class="header hide-top header-bd double-header">
+            <div class="header-top header-bd ptb-10">
+                <div class="container">
+                    <div class="col-xs-12 text-right xs-text-center">
+                        <ul class="top-info display-inline-block">
+                            <li><i class="ti-headphone-alt"></i> (102) 6666 8888</li>
+                            <li><i class="ti-email"></i> <a href="mailto:info@domain.com">info@domain.com</a></li>
+                        </ul>
+                        <ul class="social-icon-white top-social hidden-xs display-inline-block">
+                            <li><a href="#"><i class="ti-facebook"></i></a></li>
+                            <li><a href="#"><i class="ti-twitter"></i></a></li>
+                            <li><a href="#"><i class="ti-google"></i></a></li>
+                            <li><a href="#"><i class="ti-pinterest"></i></a></li>
+                            <li><a href="#"><i class="ti-instagram"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="header-bottom ptb-10 pos-relative">
+                <div class="container">
+                    <div class="col-sm-3">
+                        <div class="navbar-header">
+                            <a href="#" class="brand"><img src="{% static 'img/logo-light.png' %}" alt="Construction"></a>
+                        </div>
+                    </div>
+                    <div class="col-sm-9 hidden-xs">
+                        <nav class="mainmenu pull-right">
+                            <ul id="navi-menu">
+                                <li class="current_page_item"><a href="{% url 'index' %}">Главная</a>
+                                </li>
+                                <li><a href="{% url 'about' %}">О нас</a>
+                                </li>
+                                <li><a href="{% url 'services' %}">Галерея</a>
+                                </li>
+                                <li><a href="{% url 'projects' %}">Продукты</a>
+                                </li>
+                                <li><a href="{% url 'blogs' %}">Новости</a>
+                                </li>
+                                <li><a href="{% url 'contact' %}">Связываться с нами</a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header> <!-- Header -->
+        
+        <section class="page-heading bg-img height-500" style="background-image: url({% static 'img/about-hero.jpg' %})">
+            <div class="display-table">
+                <div class="table-cell">
+                    <div class="container">
+                        <div class="hero-content">
+                            <h2 class="fz-40 text-white fw-8 mb-15">Программисты, создавшие этот сайт</h2>
+                            <p class="text-white fz-16">Мы предлагаем бесплатные консультации <br> и лучшее управление проектами для вашего бизнеса.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section><!-- Page Heading -->
+
+        <!-- <section class="content-block pos-relative bg-grey bd-bottom">
+            <div class="bg-img-wrap pos-right wow fadeInRight" data-wow-delay="0ms" data-wow-duration="1000ms">
+                <div class="bg-img atts-scroll" style="background-image: url({{about.img.url}});"></div>
+            </div>
+            <div class="container">
+                <div class="col-sm-6 xs-padding wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1000ms">
+                    <div class="pr-15 ptb-60">
+                        <h2 class="mb-20">{{about.title}}</h2>
+                        <p class="fz-14">{{about.text}}</p>
+                    </div>
+                </div>
+            </div>
+        </section>content-block -->
+        
+        <section class="team-section padding bg-grey bd-bottom">
+            <div class="container">
+                <div class="section-heading mb-40">
+                    <h2 class="mb-10">ОПЫТНЫЕ программисты</h2>
+                </div>
+                <div class="team-box-wrap">
+                {% for i in programmers %}
+                    <div class="col-sm-4 col-xs-6 xs-padding wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="500ms">
+                        <div class="team-member bd-grey">
+                            <img src="{{i.img.url}}" alt="team-img" class="img-w1">
+                            <div class="bg-white padding-30 ptb-25 text-center">
+                                <h4 class="no-margin">{{i.name}}</h4>
+                                <p class="mb-10">{{i.job}}</p>
+                                <ul class="social-icon-black social-center">
+                                    {% if i.facebook is not None %}
+                                    <li><a href="{{i.facebook}}"><i class="ti-facebook"></i></a></li>
+                                    {% endif %}
+                                    {% if i.telegram is not None %}
+                                    <li><a href="{{i.telegram}}"><i><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16">
+                                        <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8.287 5.906q-1.168.486-4.666 2.01-.567.225-.595.442c-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294q.39.01.868-.32 3.269-2.206 3.374-2.23c.05-.012.12-.026.166.016s.042.12.037.141c-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8 8 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629q.14.092.27.187c.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.4 1.4 0 0 0-.013-.315.34.34 0 0 0-.114-.217.53.53 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09"/>
+                                      </svg></i></a></li>
+                                    {% endif %}
+                                    {% if i.instagram is not None %}
+                                    <li><a href="{{i.instagram}}"><i class="ti-instagram"></i></a></li>
+                                    {% endif %}
+                                    {% if i.instagram is not None %}
+                                    <li><a href="{{i.github}}"><i class="ti-instagram"></i></a></li>
+                                    {% endif %}
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                {% endfor %}
+                </div>
+            </div>
+        </section><!-- team Block-->
+
+        <section class="testimonial-section padding bd-bottom">
+            <div class="container">
+                <div class="section-heading pb-5 mb-40">
+                    <h2>ЧТО ЛЮДИ ДУМАЮТ О нашем сервисе</h2>
+                </div>
+                <div class="testi-carousel owl-nav-1 owl-carousel">
+                    {% for i in client %}
+                    <div class="review-box padding-20 ptb-40 bg-grey bd">
+                        <p class="fz-13">{{i.idea}}</p>
+                        <h4 class="display-inline-block">{{i.name}}</h4>
+                        <p class="display-inline-block">{{i.job}}</p>
+                        <ul class="rating display-inline-block">
+                            <li><i class="ti-star text-yellow"></i></li>
+                            <li><i class="ti-star text-yellow"></i></li>
+                            <li><i class="ti-star text-yellow"></i></li>
+                            <li><i class="ti-star text-yellow"></i></li>
+                            <li><i class="ti-star text-yellow"></i></li>
+                        </ul>
+                    </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </section><!-- testimonial-section -->
+        
+        <!-- <div class="partner-block ptb-40">
+            <div class="container">
+                <div class="col-sm-2 col-xs-4">     
+                    <div class="brand-item padding-10">
+                        <a href="#"><img src="{% static 'img/1.png' %}" class="img-w1" alt="Brands"></a>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-4">     
+                    <div class="brand-item padding-10">
+                        <a href="#"><img src="{% static 'img/2.png' %}" class="img-w1" alt="Brands"></a>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-4">     
+                    <div class="brand-item padding-10">
+                        <a href="#"><img src="{% static 'img/3.png' %}" class="img-w1" alt="Brands"></a>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-4">     
+                    <div class="brand-item padding-10">
+                        <a href="#"><img src="{% static 'img/4.png' %}" class="img-w1" alt="Brands"></a>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-4">     
+                    <div class="brand-item padding-10">
+                        <a href="#"><img src="{% static 'img/5.png' %}" class="img-w1" alt="Brands"></a>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-4">     
+                    <div class="brand-item padding-10">
+                        <a href="#"><img src="{% static 'img/6.png' %}" class="img-w1" alt="Brands"></a>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-4">     
+                    <div class="brand-item padding-10">
+                        <a href="#"><img src="{% static 'img/7.png' %}" class="img-w1" alt="Brands"></a>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-4">     
+                    <div class="brand-item padding-10">
+                        <a href="#"><img src="{% static 'img/8.png' %}" class="img-w1" alt="Brands"></a>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-4">     
+                    <div class="brand-item padding-10">
+                        <a href="#"><img src="{% static 'img/9.png' %}" class="img-w1" alt="Brands"></a>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-4">     
+                    <div class="brand-item padding-10">
+                        <a href="#"><img src="{% static 'img/10.png' %}" class="img-w1" alt="Brands"></a>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-4">     
+                    <div class="brand-item padding-10">
+                        <a href="#"><img src="{% static 'img/11.png' %}" class="img-w1" alt="Brands"></a>
+                    </div>
+                </div>
+                <div class="col-sm-2 col-xs-4">     
+                    <div class="brand-item padding-10">
+                        <a href="#"><img src="{% static 'img/12.png' %}" class="img-w1" alt="Brands"></a>
+                    </div>
+                </div>
+            </div>
+        </div><!-- partner block -->
+         -->
+        <section class="cta-section text-center bg-yellow ptb-40">
+            <div class="container">
+                <h2 class="text-white fz-18 no-margin display-inline-block">ПОЛУЧИТЕ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ И СМЕТУ ДЛЯ ВАШЕГО ПРОЕКТА</h2>
+                <a href="{% url 'contact' %}" class="b-btn btn-white btn-border ml-15">Связаться</a>
+            </div>
+        </section><!-- cta-section -->
+        
+		<section class="widget-section bd-top-dark padding bg-dark">
+            <div class="container">
+                <div class="col-sm-4 col-xs-6 xs-padding">
+                    <div class="widget-box">
+                        <img class="mb-15" src="{{info.logo.url}}" alt="Construction">
+                        <h4 class="text-light mb-25">Производство запчасти для грузовых вагонов</h4>
+                        <p class="fz-13 mb-25 text-light">Позвоните нам или зайдите в любое время, мы постараемся ответить на все запросы в течении 24 часов в рабочих дней.</p>
+                    </div>
+                </div><!-- widget 1 -->
+                <div class="col-sm-5 col-xs-6 xs-padding">
+                    <h4 class="text-white mb-40">Навигация по компании</h4>
+                    <ul class="list-1 angel mb-20">
+                            <li><a href="{% url 'index' %}">Главная</a></li>
+                            <li><a href="{% url 'about' %}">О нас</a></li>
+                            <li><a href="{% url 'projects' %}">Недавние Проекты</a></li>
+                            <li><a href="{% url 'services' %}"> Галерея</a></li>
+                            <li><a href="{% url 'blogs' %}">НОВОСТИ</a></li>
+                            <li><a href="{% url 'contact' %}"> СВЯЗЫВАТЬСЯ С НАМИ</a></li>
+                        </ul>
+                </div><!-- widget 2 -->
+                <div class="col-sm-3 col-xs-6 xs-padding">
+                    <div class="widget-box">
+                        <h4 class="text-white mb-30">{{info.name}}</h4>
+                        <ul class="addr-info footer-addr text-light fz-14">
+                            <li>{{info.location}}</li>
+                            <li>{{info.phone_uz}}</li>
+                            <li>{{info.phone_ru}}</li>
+                            <li>{{info.email}}</li>
+                            <li>{{info.timetable}}</li>
+                        </ul>
+                    </div>
+                </div><!-- widget 3 -->
+            </div>
+        </section><!-- widget-section -->
+		
+		<footer class="footer-section bg-dark text-center bd-top-dark ptb-40 tt-u">
+            <div class="container">
+                <p class="no-margin fz-13 text-light">&copy; Copyright 2024 - All Rights Reserved</p>
+            </div>
+        </footer><!--  footer section -->
+
+        <a data-scroll href="#header" id="scroll-top" class="scroll-to-top"><i class="ti-angle-up"></i></a>
+
+        <!-- All Scripts -->
+        <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
+        <script src="{% static 'js/vendor/waypoints.min.js' %}"></script>
+        <script src="{% static 'js/vendor/wow.min.js' %}"></script>
+        <script src="{% static 'js/vendor/bootstrap.min.js' %}"></script>
+        <script src="{% static 'js/vendor/jquery.nicescroll.min.js' %}"></script>
+        <script src="{% static 'js/vendor/imagesloaded.pkgd.min.js' %}"></script>
+        <script src="{% static 'js/vendor/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'js/vendor/jquery.isotope.v3.0.2.js' %}"></script>
+        <script src="{% static 'js/vendor/smooth-scroll.min.js' %}"></script>
+        <script src="{% static 'js/vendor/jquery.counterup.min.js' %}"></script>
+        <script src="{% static 'js/vendor/jquery.swipebox.min.js' %}"></script>
+        <script src="{% static 'js/vendor/jquery.hoverdir.js' %}"></script>
+        <script src="{% static 'js/vendor/jquery.slicknav.min.js' %}"></script>
+        <script src="{% static 'js/vendor/main.js' %}"></script>
+    </body>
+</html>

@@ -78,3 +78,25 @@ class Contact(models.Model):
     
 class Telegram_ids(models.Model):
     ids = models.IntegerField()
+
+
+# Programmers
+    
+
+class Programmer(models.Model):
+    img = models.ImageField(upload_to='programmers/')
+    name = models.CharField(max_length=255)
+    job = models.CharField(max_length=255)
+    text = models.CharField(max_length=255)
+    github = models.URLField(null=True, blank=True)
+    telegram = models.URLField(null=True, blank=True)
+    instagram = models.URLField(null=True, blank=True)
+    facebook = models.URLField(null=True, blank=True)
+
+
+
+class Client2(models.Model):
+    name = models.CharField(max_length=255)
+    job = models.CharField(max_length=255)
+    idea = models.TextField()
+    rate = models.IntegerField()
