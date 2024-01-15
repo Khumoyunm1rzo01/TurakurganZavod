@@ -118,8 +118,10 @@ def Add_Contact(request):
 def Programmers_View(request):
     programmers = Programmer.objects.all()
     client = Client2.objects.all()
+    info = Info.objects.last()
     context = {
         'programmers': programmers,
         'client': client,
+        'info':info,
     }
     return render(request, 'programmers.html', context)
