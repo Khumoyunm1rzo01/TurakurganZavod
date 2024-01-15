@@ -112,5 +112,5 @@ def Add_Contact(request):
             text = 'Yangi obuna: \n\nMijoz: ' + name + '\nTelefon raqami: ' + phone_number + '\nMavzu: ' + subject + '\nHabar:' + message
             url = 'https://api.telegram.org/bot' + token + '/sendMessage?chat_id='
             requests.get(url + str(id.ids) + '&text=' + text)
-    return redirect('index')
+    return redirect('contact')
             
