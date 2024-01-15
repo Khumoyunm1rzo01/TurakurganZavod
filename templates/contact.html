@@ -60,45 +60,19 @@
                     </div>
                     <div class="col-sm-9 hidden-xs">
                         <div class="pull-right">
-                            <a href="#" class="b-nav-btn">Book Us</a>
                         </div>
                         <nav class="mainmenu pull-right">
                             <ul id="navi-menu">
                                 <li class="current_page_item"><a href="{% url 'index' %}">Главная</a>
-<<<<<<< HEAD
                                 </li>
                                 <li><a href="{% url 'about' %}">О нас</a>
                                 </li>
-                                <li><a href="{% url 'services' %}">Сервисы</a>
+                                <li><a href="{% url 'services' %}">Галерея</a>
                                 </li>
-                                <li><a href="{% url 'projects' %}">Проекты</a>
-                                    <ul>
-                                        <li><a href="{% url 'projects' %}">Projects 3 Col</a></li>
-                                        <li><a href="project-details.html">Projects Details</a></li>
-                                    </ul>
+                                <li><a href="{% url 'projects' %}">Продукты</a>
                                 </li>
                                 <li><a href="{% url 'blogs' %}">Новости</a>
-                                    <ul>
-                                        <li><a href="{% url 'blogs' %}">Blog Sidebar Right</a></li>
-                                    </ul>
                                 </li>
-=======
-                                </li>
-                                <li><a href="{% url 'about' %}">О нас</a>
-                                </li>
-                                <li><a href="{% url 'services' %}">Сервисы</a>
-                                </li>
-                                <li><a href="{% url 'projects' %}">Проекты</a>
-                                    <ul>
-                                        <li><a href="{% url 'projects' %}">Проекты</a></li>
-                                    </ul>
-                                </li>
-                                <li><a href="{% url 'blogs' %}">Новости</a>
-                                    <ul>
-                                        <li><a href="{% url 'blogs' %}">Blog Sidebar Right</a></li>
-                                    </ul>
-                                </li>
->>>>>>> abc5f403f018e1f8942d102dabd891812aec9544
                                 <li><a href="{% url 'contact' %}">Связываться с нами</a>
                                 </li>
                             </ul>
@@ -108,13 +82,14 @@
             </div>
         </header> <!-- Header -->
         
-        <section class="page-heading bg-img height-500" style="background-image: url({% static 'img/contact-hero.jpg' %})">
+        <section class="page-heading bg-img height-500" style="background-image: url({{bg.img.url}})">
             <div class="display-table">
                 <div class="table-cell">
                     <div class="container">
                         <div class="hero-content">
-                            <h2 class="fz-40 text-white fw-8 mb-15">GET IN TOUCH WITH US</h2>
-                            <p class="text-white fz-16">We offer free consulting and the best project management <br>for your ideas, 100% delivery guaranteed.</p>
+                            <h2 class="fz-40 text-white fw-8 mb-15">СВЯЖИСЬ С НАМИ</h2>
+                            <p class="text-white fz-16">Мы предлагаем бесплатную консультацию и лучшее управление<br>проектами
+                                для ваших идей 100% гарантия доставки.</p>
                         </div>
                     </div>
                 </div>
@@ -124,8 +99,8 @@
         <section class="contact-wrapper padding bg-grey bd-bottom">
             <div class="container">
                 <div class="col-sm-6 xs-padding">
-                    <h2 class="mb-25">Let's talk about your project</h2>
-                    <p class="mb-30">Give us a call or drop by anytime, we endeavour to answer <br> all enquiries within 24 hours on business days.</p>
+                    <h2 class="mb-25">Давайте поговорим о вашем заказе</h2>
+                    <p class="mb-30">Позвоните нам или зайдите в любое время, мы постараемся ответить на все  <br> запросы в течение 24 часов в рабочие дни.</p>
                     <p class="mb-30 fz-16">We are open from 9am — 5pm week days.</p>
                     <p class="mb-30"><strong class="fw-7 text-black">VISIT US : </strong><br>121 King Street, Melbourne <br>Victoria 3000 Australia </p>
                     <p>

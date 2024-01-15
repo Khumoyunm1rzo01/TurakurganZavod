@@ -2,7 +2,7 @@ from django.shortcuts import redirect, render
 from .models import *
 # Create your views here.
 import requests
-from django.http import HttpResponse
+# from django.http import HttpResponse
 
 def Index(request):
     slider = Slider.objects.all()
@@ -81,13 +81,18 @@ def BlogsFull(request):
     
     return render(request, 'blog-full-width.html', context)
 
+def Contact_01(request):
+    bg = Background_Img.objects.last()
+    info = Info.objects.last()
+    context = {
+        'bg': bg,
+        'info':info
+    }
+    return render(request, 'contact.html', context)
+
 # def Contact(request):
     
-#     return render(request, 'contact.html')
-
-def Contact(request):
-    
-    return HttpResponse('Эта страница в настоящее время находится в разработке')
+#     return HttpResponse('Эта страница в настоящее время находится в разработке')
 
 def Project_Details(request):
     

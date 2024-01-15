@@ -9,7 +9,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Construction is ultimate responsive construction html template which include 3 homepage demos.">
-        <title>Construction - Ultimate Responsive Construction Template</title>
+        <title>ТУРАКУРГАНСКИЙ МЕХАНИЧЕСКИЙ ЗАВОД ПО ЛИТЬЁ</title>
         
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
@@ -66,25 +66,17 @@
                         </div>
                     </div>
                     <div class="col-sm-9 hidden-xs">
-                       
-                        
                         <nav class="mainmenu pull-right">
                             <ul id="navi-menu">
                                 <li class="current_page_item"><a href="{% url 'index' %}">Главная</a>
                                 </li>
                                 <li><a href="{% url 'about' %}">О нас</a>
                                 </li>
-                                <li><a href="{% url 'services' %}">Сервисы</a>
+                                <li><a href="{% url 'services' %}">Галерея</a>
                                 </li>
-                                <li><a href="{% url 'projects' %}">Проекты</a>
-                                    <ul>
-                                        <li><a href="{% url 'projects' %}">Проекты</a></li>
-                                    </ul>
+                                <li><a href="{% url 'projects' %}">Продукты</a>
                                 </li>
                                 <li><a href="{% url 'blogs' %}">Новости</a>
-                                    <ul>
-                                        <li><a href="{% url 'blogs' %}">Blog Sidebar Right</a></li>
-                                    </ul>
                                 </li>
                                 <li><a href="{% url 'contact' %}">Связываться с нами</a>
                                 </li>
@@ -97,23 +89,23 @@
         
         <section class="slider-section">
             <div class="main-slider owl-carousel owl-nav-3 owl-dots-1">
-                {% for i in slider %}
+                {% for i in slider%}
                 <div class="slide-item bg-img height-670" style="background-image: url({{i.img.url}})">
                     <div class="display-table">
                         <div class="table-cell">
                             <div class="container">
                                 <div class="slider-content">
                                     <h1 class="fz-45 text-white fw-8 tt-u">{{i.title}}</h1>
-                                    <p class="text-white mb-20 xs-br-none fz-16">Мы предлагаем бесплатные консультации и лучшее управление проектами <br> для ваших идей, 100% гарантия реализации.</p>
+                                    <p class="text-white mb-20 xs-br-none fz-16">{{i.text}}</p>
                                     <div class="btn-group-left">
-                                        <a href="{% static 'Document.png' %}" class="b-btn">Узнать больше</a>
+                                        <a href="./static/Document.png" class="b-btn">УЗНАТЬ БОЛЬШЕ</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                {% endfor %}
+                {% endfor %}                
             </div>
         </section><!-- slider-section -->
         
@@ -121,8 +113,7 @@
             <div class="container">
                 <div class="col-sm-7 xs-padding wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1000ms">
                     <div class="entry-content sm-no-padding ptb-30">
-                        <h2 class="mb-20">МЫ ЭКСПЕРТ В ЭТОЙ ОБЛАСТИ<br>
-                            ЛУЧШИЕ СТРОИТЕЛЬНЫЕ РЕШЕНИЯ С 2015 ГОДА.</h2>
+                        <h2 class="mb-20">Туракурганский  механический завод основан в 1973  году</h2>
                         <p class="fz-14">Мы стремимся построить устойчивое будущее, поощряя дух сотрудничества, который создает исключительный опыт, сбалансированные отношения и улучшает созданную среду сообщества.</p>
                     </div>
                 </div>
@@ -133,6 +124,8 @@
                             <li>{{info.location}}</li>
                             <li>{{info.phone_uz}}</li>
                             <li>{{info.phone_ru}}</li>
+                            <li>{{info.phone_1}}</li>
+                            <li>{{info.phone_2}}</li>
                             <li>{{info.email}}</li>
                             <li>{{info.timetable}}</li>
                         </ul>
@@ -207,14 +200,6 @@
                 <div class="row mb-40">
                     <div class="col-sm-6 xs-padding">
                         <h2 class="fw-7">ГАЛЕРЕЯ ПОСЛЕДНИХ СТРОИТЕЛЬНЫХ ПРОЕКТОВ </h2>
-                    </div>
-                    <div class="col-sm-6 xs-padding">
-                        <ul class="filter-menu text-right xs-text-center">
-                            <li class="active" data-filter="*">Все проекты</li>
-                            <li data-filter=".architecture">АРХИТЕКТУРА</li>
-                            <li data-filter=".construction"> СТРОИТЕЛЬСТВО</li>
-                            <li data-filter=".interior"> ДИЗАЙН ИНТЕРЬЕРА</li>
-                        </ul><!-- /.filter-menu -->
                     </div>
                 </div>
                 <div class="portfolio-items filter-items img-w1 row">
