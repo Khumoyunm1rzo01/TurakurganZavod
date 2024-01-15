@@ -66,24 +66,19 @@
                         </div>
                     </div>
                     <div class="col-sm-9 hidden-xs">
-                       
-                        
                         <nav class="mainmenu pull-right">
                             <ul id="navi-menu">
                                 <li class="current_page_item"><a href="{% url 'index' %}">Главная</a>
                                 </li>
                                 <li><a href="{% url 'about' %}">О нас</a>
                                 </li>
-                                <li><a href="{% url 'services' %}">Сервисы</a>
+                                <li><a href="{% url 'services' %}">Галерея</a>
                                 </li>
                                 <li><a href="{% url 'projects' %}">Проекты</a>
-                                    <ul>
-                                        <li><a href="{% url 'projects' %}">Проекты</a></li>
-                                    </ul>
                                 </li>
                                 <li><a href="{% url 'blogs' %}">Новости</a>
                                     <ul>
-                                        <li><a href="{% url 'blogs' %}">Blog Sidebar Right</a></li>
+                                        <li><a href="blog-sidebar-right.html">Blog Sidebar Right</a></li>
                                     </ul>
                                 </li>
                                 <li><a href="{% url 'contact' %}">Связываться с нами</a>
@@ -97,23 +92,23 @@
         
         <section class="slider-section">
             <div class="main-slider owl-carousel owl-nav-3 owl-dots-1">
-                {% for i in slider %}
+                {% for i in slider%}
                 <div class="slide-item bg-img height-670" style="background-image: url({{i.img.url}})">
                     <div class="display-table">
                         <div class="table-cell">
                             <div class="container">
                                 <div class="slider-content">
                                     <h1 class="fz-45 text-white fw-8 tt-u">{{i.title}}</h1>
-                                    <p class="text-white mb-20 xs-br-none fz-16">Мы предлагаем бесплатные консультации и лучшее управление проектами <br> для ваших идей, 100% гарантия реализации.</p>
+                                    <p class="text-white mb-20 xs-br-none fz-16">{{i.text}}</p>
                                     <div class="btn-group-left">
-                                        <a href="{% static 'Document.png' %}" class="b-btn">Узнать больше</a>
+                                        <a href="./static/Document.png" class="b-btn">УЗНАТЬ БОЛЬШЕ</a>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-                {% endfor %}
+                {% endfor %}                
             </div>
         </section><!-- slider-section -->
         
