@@ -9,7 +9,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="description" content="Construction is ultimate responsive construction html template which include 3 homepage demos.">
-        <title>Construction - Ultimate Responsive Construction Template</title>
+        <title>ТУРАКУРГАНСКИЙ МЕХАНИЧЕСКИЙ ЗАВОД ПО ЛИТЬЁ</title>
         
         <!-- Favicon -->
         <link rel="shortcut icon" type="image/x-icon" href="{% static 'img/favicon.png' %}">
@@ -101,164 +101,99 @@
                 <div class="col-sm-6 xs-padding">
                     <h2 class="mb-25">Давайте поговорим о вашем заказе</h2>
                     <p class="mb-30">Позвоните нам или зайдите в любое время, мы постараемся ответить на все  <br> запросы в течение 24 часов в рабочие дни.</p>
-                    <p class="mb-30 fz-16">We are open from 9am — 5pm week days.</p>
-                    <p class="mb-30"><strong class="fw-7 text-black">VISIT US : </strong><br>121 King Street, Melbourne <br>Victoria 3000 Australia </p>
+                    <p class="mb-30 fz-16">{{info.timetable}}</p>
+                    <p class="mb-30"><strong class="fw-7 text-black">ПОСЕТИТЕ НАМ : </strong><br>{{info.location}}</p>
                     <p>
-                        <strong class="fw-7 text-black">CALL: </strong>+758-546-789 <br>
-                        <strong class="fw-7 text-black">EMAIL: </strong>email@yourdomain.com
+                        <strong class="fw-7 text-black">Телефоны Узб: </strong>{{info.phone_uz}} <br>
+                        <strong class="fw-7 text-black">Телефоны Рос: </strong>{{info.phone_ru}}<br>
+                        <strong class="fw-7 text-black">EMAIL: </strong>{{info.email}}
                     </p>
                 </div><!-- contact Info -->
                 <div class="col-sm-6 xs-padding">
-                    <h2 class="mb-25">Drop us a line</h2>
-                    <p>Visit us in United Stats or make contact via the form below <br> to talk more about your project or idea.</p>
+                    <h2 class="mb-25">НАПИШИТЕ НАМ</h2>
+                    <p>Посетите нам в Узбекистан или свяжитесь с нами через форму ниже. <br> чтобы побольше рассказать о вашем продукте или идее.</p>
                     <div class="cf-wrapper">
-                        <form action="contact.php" method="post" id="ajax_form" class="form-horizontal">
+                        <form action="{% url 'add-contact' %}" method="post" id="ajax_form" class="form-horizontal">
+                            {% csrf_token %}
                             <div class="form-group">
                                 <div class="col-sm-6 xs-padding">
-                                    <input type="text" id="name" name="name" class="form-control" placeholder="Name" required>
+                                    <input type="text" id="name" name="name" class="form-control" placeholder="Имя" required>
                                 </div>
                                 <div class="col-sm-6">
-                                    <input type="email" id="email" name="email" class="form-control" placeholder="Email" required>
+                                    <input type="number" id="phone_number" name="phone_number" class="form-control" placeholder="Номер телефона" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-xs-12">
-                                    <input type="text" id="subject" name="subject" class="form-control" placeholder="Subject" required>
+                                    <input type="text" id="subject" name="subject" class="form-control" placeholder="Тема" required>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-xs-12">
-                                    <textarea id="message" name="message" cols="30" rows="5" class="form-control" placeholder="Message" required></textarea>
+                                    <textarea id="message" name="message" cols="30" rows="5" class="form-control" placeholder="Сообщение" required></textarea>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <div class="col-xs-12 align-center">
-                                    <button id="submit" class="b-btn" type="submit">Send Message</button>
+                                    <button id="submit" class="b-btn" type="submit">Отправить</button>
                                 </div>
                             </div>
-                            <div id="form-messages" class="alert" role="alert"></div>
                         </form>
                     </div>
                 </div><!-- contact form -->
             </div>
         </section>
         
-        <div class="partner-block ptb-40">
-            <div class="container">
-                <div class="col-sm-2 col-xs-4">     
-                    <div class="brand-item padding-10">
-                        <a href="#"><img src="{% static 'img/1.png' %}" class="img-w1" alt="Brands"></a>
-                    </div>
-                </div>
-                <div class="col-sm-2 col-xs-4">     
-                    <div class="brand-item padding-10">
-                        <a href="#"><img src="{% static 'img/2.png' %}" class="img-w1" alt="Brands"></a>
-                    </div>
-                </div>
-                <div class="col-sm-2 col-xs-4">     
-                    <div class="brand-item padding-10">
-                        <a href="#"><img src="{% static 'img/3.png' %}" class="img-w1" alt="Brands"></a>
-                    </div>
-                </div>
-                <div class="col-sm-2 col-xs-4">     
-                    <div class="brand-item padding-10">
-                        <a href="#"><img src="{% static 'img/4.png' %}" class="img-w1" alt="Brands"></a>
-                    </div>
-                </div>
-                <div class="col-sm-2 col-xs-4">     
-                    <div class="brand-item padding-10">
-                        <a href="#"><img src="{% static 'img/5.png' %}" class="img-w1" alt="Brands"></a>
-                    </div>
-                </div>
-                <div class="col-sm-2 col-xs-4">     
-                    <div class="brand-item padding-10">
-                        <a href="#"><img src="{% static 'img/6.png' %}" class="img-w1" alt="Brands"></a>
-                    </div>
-                </div>
-                <div class="col-sm-2 col-xs-4">     
-                    <div class="brand-item padding-10">
-                        <a href="#"><img src="{% static 'img/7.png' %}" class="img-w1" alt="Brands"></a>
-                    </div>
-                </div>
-                <div class="col-sm-2 col-xs-4">     
-                    <div class="brand-item padding-10">
-                        <a href="#"><img src="{% static 'img/8.png' %}" class="img-w1" alt="Brands"></a>
-                    </div>
-                </div>
-                <div class="col-sm-2 col-xs-4">     
-                    <div class="brand-item padding-10">
-                        <a href="#"><img src="{% static 'img/9.png' %}" class="img-w1" alt="Brands"></a>
-                    </div>
-                </div>
-                <div class="col-sm-2 col-xs-4">     
-                    <div class="brand-item padding-10">
-                        <a href="#"><img src="{% static 'img/10.png' %}" class="img-w1" alt="Brands"></a>
-                    </div>
-                </div>
-                <div class="col-sm-2 col-xs-4">     
-                    <div class="brand-item padding-10">
-                        <a href="#"><img src="{% static 'img/11.png' %}" class="img-w1" alt="Brands"></a>
-                    </div>
-                </div>
-                <div class="col-sm-2 col-xs-4">     
-                    <div class="brand-item padding-10">
-                        <a href="#"><img src="{% static 'img/12.png' %}" class="img-w1" alt="Brands"></a>
-                    </div>
-                </div>
-            </div>
-        </div><!-- partner block -->
         
         <section class="cta-section text-center bg-yellow ptb-40">
             <div class="container">
-                <h2 class="text-white fz-18 no-margin display-inline-block">GET YOUR FREE CONSULTING AND ESTIMATE FOR YOUR PROJECT</h2>
-                <a href="#" class="b-btn btn-white btn-border ml-15">Explore</a>
+                <h2 class="text-white fz-18 no-margin display-inline-block">ПОЛУЧИТЕ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ И СМЕТУ ДЛЯ ВАШЕГО ПРОЕКТА</h2>
+                <a href="{% url 'contact' %}" class="b-btn btn-white btn-border ml-15">Связаться</a>
             </div>
         </section><!-- cta-section -->
         
-        <section class="widget-section bd-top-dark padding bg-dark">
+		<section class="widget-section bd-top-dark padding bg-dark">
             <div class="container">
                 <div class="col-sm-4 col-xs-6 xs-padding">
                     <div class="widget-box">
-                        <img class="mb-15" src="{% static 'img/logo-light.png' %}" alt="Construction">
-                        <h4 class="text-light mb-25">Ultimate design for your websites</h4>
-                        <p class="fz-13 mb-25 text-light">Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days.</p>
+                        <img class="mb-15" src="{{info.logo.url}}" alt="Construction">
+                        <h4 class="text-light mb-25">Превосходный продукт для вашего строительства</h4>
+                        <p class="fz-13 mb-25 text-light">Позвоните нам или зайдите в любое время, мы постараемся ответить на все запросы в течении 24 часов в рабочих дней.</p>
                     </div>
                 </div><!-- widget 1 -->
                 <div class="col-sm-5 col-xs-6 xs-padding">
-                    <h4 class="text-white mb-40">Company navigation</h4>
+                    <h4 class="text-white mb-40">Навигация по компании</h4>
                     <ul class="list-1 angel mb-20">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Interior Design</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Recent Projects</a></li>
-                            <li><a href="#">Service</a></li>
-                            <li><a href="#">Architecture</a></li>
-                            <li><a href="#">Construction</a></li>
-                            <li><a href="#">Building Renovation</a></li>
+                            <li><a href="{% url 'index' %}">Главная</a></li>
+                            <li><a href="{% url 'about' %}">О нас</a></li>
+                            <li><a href="{% url 'projects' %}">Недавние Проекты</a></li>
+                            <li><a href="{% url 'services' %}"> СЕРВИСЫ</a></li>
+                            <li><a href="{% url 'blogs' %}">НОВОСТИ</a></li>
+                            <li><a href="{% url 'contact' %}"> СВЯЗЫВАТЬСЯ С НАМИ</a></li>
                         </ul>
                 </div><!-- widget 2 -->
                 <div class="col-sm-3 col-xs-6 xs-padding">
                     <div class="widget-box">
-                        <h4 class="text-white mb-30">Construction Office</h4>
+                        <h4 class="text-white mb-30">{{info.name}}</h4>
                         <ul class="addr-info footer-addr text-light fz-14">
-                            <li>Tottenh Road, London, England.</li>
-                            <li>(102) 6666 8888</li>
-                            <li>info@thememove.com</li>
-                            <li>Mon - Sat: 9:00 - 18:00</li>
+                            <li>{{info.location}}</li>
+                            <li>{{info.phone_uz}}</li>
+                            <li>{{info.phone_ru}}</li>
+                            <li>{{info.email}}</li>
+                            <li>{{info.timetable}}</li>
                         </ul>
                     </div>
                 </div><!-- widget 3 -->
             </div>
         </section><!-- widget-section -->
-        
-        <footer class="footer-section bg-dark text-center bd-top-dark ptb-40 tt-u">
+		
+		<footer class="footer-section bg-dark text-center bd-top-dark ptb-40 tt-u">
             <div class="container">
-                <p class="no-margin fz-13 text-light">&copy; Copyright 2017 Crack Themes - All Rights Reserved</p>
+                <p class="no-margin fz-13 text-light">&copy; Copyright 2024 - All Rights Reserved</p>
             </div>
         </footer><!--  footer section -->
 
         <a data-scroll href="#header" id="scroll-top" class="scroll-to-top"><i class="ti-angle-up"></i></a>
-
         <!-- All Scripts -->
         <script src="{% static "js/vendor/jquery-1.12.4.min.js" %}"></script>
         <script src="{% static "js/vendor/waypoints.min.js" %}"></script>
