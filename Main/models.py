@@ -15,6 +15,7 @@ class Info(models.Model):
     location = models.CharField(max_length=255)
     phone_uz = models.CharField(max_length=255)
     phone_ru = models.CharField(max_length=255)
+    phone_2 = models.CharField(max_length=255)
     email = models.EmailField()
     timetable = models.CharField(max_length=255)
 

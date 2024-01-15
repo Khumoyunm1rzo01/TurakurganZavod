@@ -91,7 +91,7 @@
             </div>
         </header> <!-- Header -->
         
-        <section class="page-heading bg-img height-500" style="background-image: url({% static 'img/service-hero.jpg' %})">
+        <section class="page-heading bg-img height-500" style="background-image: url({{bg.img.url}})">
             <div class="display-table">
                 <div class="table-cell">
                     <div class="container">
@@ -106,14 +106,14 @@
         
         <section class="cta-section text-center bg-yellow ptb-40">
             <div class="container">
-                <h2 class="text-white fz-18 no-margin display-inline-block">GET YOUR FREE CONSULTING AND ESTIMATE FOR YOUR PROJECT</h2>
-                <a href="#" class="b-btn btn-white btn-border ml-15">Explore</a>
+                <h2 class="text-white fz-18 no-margin display-inline-block">ПОЛУЧИТЕ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ И СМЕТУ ДЛЯ ВАШЕГО ПРОЕКТА</h2>
+                <a href="{% url 'contact' %}" class="b-btn btn-white btn-border ml-15">Связаться</a>
             </div>
         </section><!-- cta-section -->
         
         <section class="services-block bg-grey border-bottom padding">
             <div class="container">
-               <h2 class="mb-40 ml-15">Best Construction Services</h2>
+               <h2 class="mb-40 ml-15">Картинки</h2>
                 <div class="service-items">
                     <div class="col-sm-4 col-xs-6 padding-15">
                         <div class="service-item wow zoomIn" data-wow-delay="0ms" data-wow-duration="1000ms">
