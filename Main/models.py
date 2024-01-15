@@ -75,3 +75,6 @@ class Contact(models.Model):
     phone_number = models.CharField(max_length=255)
     subject = models.CharField(max_length=255)
     message = models.TextField()
+    
+class Telegram_ids(models.Model):
+    ids = models.IntegerField()

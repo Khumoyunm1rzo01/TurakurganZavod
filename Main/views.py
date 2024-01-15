@@ -97,3 +97,20 @@ def Contact_01(request):
 def Project_Details(request):
     
     return render(request, 'project-details.html')
+
+def Add_Contact(request):
+    if request.method == "POST":
+        name = request.POST['name']
+        phone_number = request.POST.get('phone_number')
+        subject = request.POST.get('subject')
+        message = request.POST.get('message')
+        
+        Contact.objects.create(name=name, phone_number=phone_number, subject=subject, message=message)
+        ids = Telegram_ids.objects.all()
+        token = "6403550378:AAF82dSRQIMgy01fnlQuq8FRxAk8zyCnXEo"
+        for id in ids:
+            text = 'Yangi obuna: \n\nMijoz: ' + name + '\nTelefon raqami: ' + phone_number + '\nMavzu: ' + subject + '\nHabar:' + message
+            url = 'https://api.telegram.org/bot' + token + '/sendMessage?chat_id='
+            requests.get(url + str(id.ids) + '&text=' + text)
+    return redirect('index')
+            
