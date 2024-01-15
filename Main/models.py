@@ -64,6 +64,10 @@ class Background_Img(models.Model):
     img2 = models.ImageField(upload_to='bg/')
 
 
+class Picture(models.Model):
+    img = models.ImageField(upload_to='gallery/')
+
+
 # Contact page
     
 class Contact(models.Model):

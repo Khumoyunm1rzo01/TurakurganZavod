@@ -59,9 +59,6 @@
                         </div>
                     </div>
                     <div class="col-sm-9 hidden-xs">
-                        <div class="pull-right">
-                            <a href="#" class="b-nav-btn">Book Us</a>
-                        </div>
                         <nav class="mainmenu pull-right">
                             <ul id="navi-menu">
                                 <li class="current_page_item"><a href="{% url 'index' %}">Главная</a>
@@ -70,12 +67,9 @@
                                 </li>
                                 <li><a href="{% url 'services' %}">Галерея</a>
                                 </li>
-                                <li><a href="{% url 'projects' %}">Проекты</a>
+                                <li><a href="{% url 'projects' %}">Продукты</a>
                                 </li>
                                 <li><a href="{% url 'blogs' %}">Новости</a>
-                                    <ul>
-                                        <li><a href="blog-sidebar-right.html">Blog Sidebar Right</a></li>
-                                    </ul>
                                 </li>
                                 <li><a href="{% url 'contact' %}">Связываться с нами</a>
                                 </li>
@@ -151,7 +145,7 @@
         <section class="testimonial-section padding bd-bottom">
             <div class="container">
                 <div class="section-heading pb-5 mb-40">
-                    <h2>WHAT PEOPLE THINK ABOUT US</h2>
+                    <h2>ЧТО ЛЮДИ ДУМАЮТ О НАС</h2>
                 </div>
                 <div class="testi-carousel owl-nav-1 owl-carousel">
                     {% for i in client %}
@@ -236,7 +230,7 @@
             </div>
         </div><!-- partner block -->
          -->
-         <section class="cta-section text-center bg-yellow ptb-40">
+        <section class="cta-section text-center bg-yellow ptb-40">
             <div class="container">
                 <h2 class="text-white fz-18 no-margin display-inline-block">ПОЛУЧИТЕ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ И СМЕТУ ДЛЯ ВАШЕГО ПРОЕКТА</h2>
                 <a href="{% url 'contact' %}" class="b-btn btn-white btn-border ml-15">Связаться</a>

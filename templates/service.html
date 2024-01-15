@@ -61,7 +61,6 @@
                     </div>
                     <div class="col-sm-9 hidden-xs">
                         <div class="pull-right">
-                            <a href="#" class="b-nav-btn">Book Us</a>
                         </div>
                         <nav class="mainmenu pull-right">
                             <ul id="navi-menu">
@@ -71,7 +70,7 @@
                                 </li>
                                 <li><a href="{% url 'services' %}">Галерея</a>
                                 </li>
-                                <li><a href="{% url 'projects' %}">Проекты</a>
+                                <li><a href="{% url 'projects' %}">Продукты</a>
                                 </li>
                                 <li><a href="{% url 'blogs' %}">Новости</a>
                                     <ul>
@@ -111,101 +110,57 @@
             <div class="container">
                <h2 class="mb-40 ml-15">Картинки</h2>
                 <div class="service-items">
-                    <div class="col-sm-4 col-xs-6 padding-15">
-                        <div class="service-item wow zoomIn" data-wow-delay="0ms" data-wow-duration="1000ms">
-                            <img class="img-w1" src="{% static 'img/service-1.jpg' %}" alt="Service">
-                            <div class="post-info padding-30 ptb-15">
-                                <h4 class="fz-18 no-margin text-white">ARCHITECTURE</h4>
-                                <p class="text-white tt-u fz-13">This is short Description</p>
-                                <a href="#" class="read-more text-white fz-12 tt-u">Read More</a>
+                    <div class="portfolio-items filter-items img-w1 row">
+                        {% for i in img %}
+                        <div class="col-sm-4 col-xs-6 single-item padding-10 architecture">
+                            <div class="portfolio-box">
+                                <img class="img-w1" src="{{i.img.url}}" alt="Portfolio Image">
+                                <a href="{{i.img.url}}" class="overlay lightbox text-center">
+                                    <div class="display-table">
+                                        <div class="table-cell padding-15">
+                                            <h4 class="mb-10 fz-16 text-white display-inline-block padding-25 ptb-15 bg-yellow">ДИЗАЙН ИНТЕРЬЕРА</h4>
+                                        </div>
+                                    </div>
+                                </a>
                             </div>
                         </div>
-                    </div>
-                    <div class="col-sm-4 col-xs-6 padding-15">
-                         <div class="service-item wow zoomIn" data-wow-delay="0ms" data-wow-duration="1000ms">
-                            <img class="img-w1" src="{% static 'img/service-2.jpg' %}" alt="Service">
-                            <div class="post-info padding-30 ptb-15">
-                                <h4 class="fz-18 no-margin text-white">BUILDING RENOVATION</h4>
-                                <p class="text-white tt-u fz-13">This is short Description</p>
-                                <a href="#" class="read-more text-white fz-12 tt-u">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-xs-6 padding-15">
-                        <div class="service-item wow zoomIn" data-wow-delay="0ms" data-wow-duration="1000ms">
-                            <img class="img-w1" src="{% static 'img/service-3.jpg' %}" alt="Service">
-                            <div class="post-info padding-30 ptb-15">
-                                <h4 class="fz-18 no-margin text-white">CONSULTING</h4>
-                                <p class="text-white tt-u fz-13">This is short Description</p>
-                                <a href="#" class="read-more text-white fz-12 tt-u">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-xs-6 padding-15">
-                        <div class="service-item wow zoomIn" data-wow-delay="0ms" data-wow-duration="1000ms">
-                            <img class="img-w1" src="{% static 'img/service-4.jpg' %}" alt="Service">
-                            <div class="post-info padding-30 ptb-15">
-                                <h4 class="fz-18 no-margin text-white">CONSTRUCTION</h4>
-                                <p class="text-white tt-u fz-13">This is short Description</p>
-                                <a href="#" class="read-more text-white fz-12 tt-u">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-xs-6 padding-15">
-                        <div class="service-item wow zoomIn" data-wow-delay="0ms" data-wow-duration="1000ms">
-                            <img class="img-w1" src="{% static 'img/service-5.jpg' %}" alt="Service">
-                            <div class="post-info padding-30 ptb-15">
-                                <h4 class="fz-18 no-margin text-white">INTERIOR DESIGN</h4>
-                                <p class="text-white tt-u fz-13">This is short Description</p>
-                                <a href="#" class="read-more text-white fz-12 tt-u">Read More</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-sm-4 col-xs-6 padding-15">
-                        <div class="service-item wow zoomIn" data-wow-delay="0ms" data-wow-duration="1000ms">
-                            <img class="img-w1" src="{% static 'img/service-6.jpg' %}" alt="Service">
-                            <div class="post-info padding-30 ptb-15">
-                                <h4 class="fz-18 no-margin text-white">CONCRETE TRANSPORT</h4>
-                                <p class="text-white tt-u fz-13">This is short Description</p>
-                                <a href="#" class="read-more text-white fz-12 tt-u">Read More</a>
-                            </div>
-                        </div>
+                        {% endfor %}
                     </div>
                 </div><!-- service-items -->
             </div>
         </section><!-- services Block -->
         
-        <section class="counter-section ptb-140 bg-img" style="background-image: url({% static 'img/counter-bg.jpg' %});">
+        <section class="counter-section ptb-140 bg-img" style="background-image: url({{bg.img2.url}});">
             <div class="container">
                 <div class="col-sm-3 col-xs-6 xs-padding">
                     <div class="counter-box">
-                        <h3 class="fz-35 fw-7 text-yellow"><span class="counter">3468</span>+</h3>
-                        <h4 class="text-white fw-7 no-margin">Project Finished</h4>
+                        <h3 class="fz-35 fw-7 text-yellow"><span class="counter">{{stats.project_finished}}</span>+</h3>
+                        <h4 class="text-white fw-7 no-margin">Проекты завершены</h4>
                     </div>
                 </div><!-- counter 1 -->
                 <div class="col-sm-3 col-xs-6 xs-padding">
                     <div class="counter-box">
-                        <h3 class="fz-35 fw-7 text-yellow"><span class="counter">200</span>+</h3>
-                        <h4 class="text-white fw-7 no-margin">Happy Client</h4>
+                        <h3 class="fz-35 fw-7 text-yellow"><span class="counter">{{stats.client}}</span>+</h3>
+                        <h4 class="text-white fw-7 no-margin">Клиенты</h4>
                     </div>
                 </div><!-- counter 2 -->
                 <div class="col-sm-3 col-xs-6 xs-padding">
                     <div class="counter-box">
-                        <h3 class="fz-35 fw-7 text-yellow"><span class="counter">5000</span>+</h3>
-                        <h4 class="text-white fw-7 no-margin">Hour Of work</h4>
+                        <h3 class="fz-35 fw-7 text-yellow"><span class="counter">{{stats.hour_work}}</span>+</h3>
+                        <h4 class="text-white fw-7 no-margin">Час работы</h4>
                     </div>
                 </div><!-- counter 3 -->
                 <div class="col-sm-3 col-xs-6 xs-padding">
                     <div class="counter-box">
-                        <h3 class="fz-35 fw-7 text-yellow"><span class="counter">15</span>+</h3>
-                        <h4 class="text-white fw-7 no-margin">Award won</h4>
+                        <h3 class="fz-35 fw-7 text-yellow"><span class="counter">{{stats.award_won}}</span>+</h3>
+                        <h4 class="text-white fw-7 no-margin">Выиграно наград</h4>
                     </div>
                 </div><!-- counter 4 -->
             </div>
         </section><!-- counter-section -->
 
         
-        <div class="partner-block ptb-40">
+        <!-- <div class="partner-block ptb-40">
             <div class="container">
                 <div class="col-sm-2 col-xs-4">     
                     <div class="brand-item padding-10">
@@ -269,58 +224,55 @@
                 </div>
             </div>
         </div><!-- partner block -->
-        
         <section class="cta-section text-center bg-yellow ptb-40">
             <div class="container">
-                <h2 class="text-white fz-18 no-margin display-inline-block">GET YOUR FREE CONSULTING AND ESTIMATE FOR YOUR PROJECT</h2>
-                <a href="#" class="b-btn btn-white btn-border ml-15">Explore</a>
+                <h2 class="text-white fz-18 no-margin display-inline-block">ПОЛУЧИТЕ БЕСПЛАТНУЮ КОНСУЛЬТАЦИЮ И СМЕТУ ДЛЯ ВАШЕГО ПРОЕКТА</h2>
+                <a href="{% url 'contact' %}" class="b-btn btn-white btn-border ml-15">Связаться</a>
             </div>
         </section><!-- cta-section -->
         
-        <section class="widget-section bd-top-dark padding bg-dark">
+		<section class="widget-section bd-top-dark padding bg-dark">
             <div class="container">
                 <div class="col-sm-4 col-xs-6 xs-padding">
                     <div class="widget-box">
-                        <img class="mb-15" src="{% static 'img/logo-light.png' %}" alt="Construction">
-                        <h4 class="text-light mb-25">Ultimate design for your websites</h4>
-                        <p class="fz-13 mb-25 text-light">Give us a call or drop by anytime, we endeavour to answer all enquiries within 24 hours on business days.</p>
+                        <img class="mb-15" src="{{info.logo.url}}" alt="Construction">
+                        <h4 class="text-light mb-25">Превосходный продукт для вашего строительства</h4>
+                        <p class="fz-13 mb-25 text-light">Позвоните нам или зайдите в любое время, мы постараемся ответить на все запросы в течение 24 часов в рабочие дни.</p>
                     </div>
                 </div><!-- widget 1 -->
                 <div class="col-sm-5 col-xs-6 xs-padding">
-                    <h4 class="text-white mb-40">Company navigation</h4>
+                    <h4 class="text-white mb-40">Навигация по компании</h4>
                     <ul class="list-1 angel mb-20">
-                            <li><a href="#">Home</a></li>
-                            <li><a href="#">Interior Design</a></li>
-                            <li><a href="#">About Us</a></li>
-                            <li><a href="#">Recent Projects</a></li>
-                            <li><a href="#">Service</a></li>
-                            <li><a href="#">Architecture</a></li>
-                            <li><a href="#">Construction</a></li>
-                            <li><a href="#">Building Renovation</a></li>
+                            <li><a href="{% url 'index' %}">Главная</a></li>
+                            <li><a href="{% url 'about' %}">О нас</a></li>
+                            <li><a href="{% url 'projects' %}">Недавние Проекты</a></li>
+                            <li><a href="{% url 'services' %}"> Галерея</a></li>
+                            <li><a href="{% url 'blogs' %}">НОВОСТИ</a></li>
+                            <li><a href="{% url 'contact' %}"> СВЯЗЫВАТЬСЯ С НАМИ</a></li>
                         </ul>
                 </div><!-- widget 2 -->
                 <div class="col-sm-3 col-xs-6 xs-padding">
                     <div class="widget-box">
-                        <h4 class="text-white mb-30">Construction Office</h4>
+                        <h4 class="text-white mb-30">{{info.name}}</h4>
                         <ul class="addr-info footer-addr text-light fz-14">
-                            <li>Tottenh Road, London, England.</li>
-                            <li>(102) 6666 8888</li>
-                            <li>info@thememove.com</li>
-                            <li>Mon - Sat: 9:00 - 18:00</li>
+                            <li>{{info.location}}</li>
+                            <li>{{info.phone_uz}}</li>
+                            <li>{{info.phone_ru}}</li>
+                            <li>{{info.email}}</li>
+                            <li>{{info.timetable}}</li>
                         </ul>
                     </div>
                 </div><!-- widget 3 -->
             </div>
         </section><!-- widget-section -->
-        
-        <footer class="footer-section bg-dark text-center bd-top-dark ptb-40 tt-u">
+		
+		<footer class="footer-section bg-dark text-center bd-top-dark ptb-40 tt-u">
             <div class="container">
-                <p class="no-margin fz-13 text-light">&copy; Copyright 2017 Crack Themes - All Rights Reserved</p>
+                <p class="no-margin fz-13 text-light">&copy; Copyright 2024 - All Rights Reserved</p>
             </div>
         </footer><!--  footer section -->
 
         <a data-scroll href="#header" id="scroll-top" class="scroll-to-top"><i class="ti-angle-up"></i></a>
-
         <!-- All Scripts -->
         <script src="{% static 'js/vendor/jquery-1.12.4.min.js' %}"></script>
         <script src="{% static 'js/vendor/waypoints.min.js' %}"></script>
