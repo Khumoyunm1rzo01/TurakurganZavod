@@ -33,6 +33,11 @@ class Client(models.Model):
     rate = models.IntegerField()
 
 
+class Category(models.Model):
+   title = models.CharField(max_length=255)
+   text = models.TextField()
+   logo = models.ImageField()
+
 # About page
 
 class About_model(models.Model):

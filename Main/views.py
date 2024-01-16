@@ -5,6 +5,7 @@ import requests
 # from django.http import HttpResponse
 
 def Index(request):
+    category = Category.objects.all()
     slider = Slider.objects.all()
     info = Info.objects.last()
     product = Product.objects.all().order_by('-id')[:6]
@@ -16,6 +17,7 @@ def Index(request):
         'product': product,
         'product3': product3,
         'client': client,
+	'category': category,
     }
     
     return render(request, 'index.html', context)
