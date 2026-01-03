@@ -1,12 +1,20 @@
-asgiref==3.7.2
-certifi==2023.11.17
-charset-normalizer==3.3.2
-Django==5.0.1
-idna==3.6
-pillow==10.2.0
-requests==2.31.0
-sqlparse==0.4.4
-urllib3==2.1.0
-psycopg2-binary
-whitenoise
+# asgiref==3.7.2
+# certifi==2023.11.17
+# charset-normalizer==3.3.2
+# Django==5.0.1
+# idna==3.6
+# pillow==10.2.0
+# requests==2.31.0
+# sqlparse==0.4.4
+# urllib3==2.1.0
+# psycopg2-binary
+# whitenoise
+# gunicorn
+
+Django>=4.2,<5.0
+asgiref>=3.7
 gunicorn
+whitenoise
+psycopg2-binary
+pillow
+requests
