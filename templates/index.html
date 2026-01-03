@@ -115,7 +115,7 @@
             <div class="container">
                 <div class="col-sm-7 xs-padding wow fadeInLeft" data-wow-delay="0ms" data-wow-duration="1000ms">
                     <div class="entry-content sm-no-padding ptb-30">
-                        <h2 class="mb-20">Туракурганский  механический завод основан в 1973  году</h2>
+                        <h2 class="mb-20">Туракурганский МЕХАНИЧЕСКИЙ Вагоностроительный Завод основан в 1973  году</h2>
                         <p class="fz-14">Мы стремимся построить устойчивое будущее, поощряя дух сотрудничества, который создает исключительный опыт, сбалансированные отношения и улучшает созданную среду сообщества.</p>
                     </div>
                 </div>
@@ -140,58 +140,16 @@
 			<div class="container">
 				<ul class="services-wrap">
 					<li class="col-md-4 col-xs-6 ptb-15 wow zoomIn" data-wow-delay="0ms" data-wow-duration="1000ms">
-						<div class="service-box">
-                            <i class="ct ct-construct-2 fz-60">
-                            <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span><span class="path14"></span>
-                            </i>
-							<h4 class="fw-7">АРХИТЕКТУРА</h4>
-							<p class="fz-13">Общий термин для описания зданий и других физических сооружений.</p>
-						</div>
+					{% for i in category %}	
+					<div class="service-box">
+  					    	<img src="{{i.logo.url}}" alt="Description of the image">                            
+							<h4 class="fw-7">{{i.title}}</h4>
+							<p class="fz-13">{{i.text}}</p>
+					</div>
+                    {% endfor %}
 					</li>
 					<li class="col-md-4 col-xs-6 ptb-15 wow zoomIn" data-wow-delay="0ms" data-wow-duration="1000ms">
-						<div class="service-box">
-							<i class="ct ct-loader fz-60">
-                            <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span>
-                            </i>
-							<h4 class="fw-7">ДЕТАЛИ</h4>
-							<p class="fz-13">Процесс ремонта обычно можно разбить на несколько этапов:</p>
-						</div>
-					</li>
-					<li class="col-md-4 col-xs-6 ptb-15 wow zoomIn" data-wow-delay="0ms" data-wow-duration="1000ms">
-						<div class="service-box">
-							<i class="ct ct-technology fz-60">
-                            <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span>
-                            </i>
-							<h4 class="fw-7">КОНСАЛТИНГ</h4>
-							<p class="fz-13">Спектр областей знаний, охватываемых термином «консультант», широк.</p>
-						</div>
-					</li>
-					<li class="col-md-4 col-xs-6 ptb-15 wow zoomIn" data-wow-delay="0ms" data-wow-duration="1000ms">
-						<div class="service-box">
-							<i class="ct ct-construct fz-60">
-                            <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span>
-                            </i>
-							<h4 class="fw-7">СТРОИТЕЛЬСТВО</h4>
-							<p class="fz-13">Строительство – это процесс возведения здания или инфраструктуры.</p>
-						</div>
-					</li>
-					<li class="col-md-4 col-xs-6 ptb-15 wow zoomIn" data-wow-delay="0ms" data-wow-duration="1000ms">
-						<div class="service-box">
-							<i class="ct ct-construct-3 fz-60">
-                            <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span>
-                            </i>
-							<h4 class="fw-7">ДИЗАЙН ИНТЕРЬЕРА</h4>
-							<p class="fz-13">Дизайн интерьера – это искусство и наука улучшения интерьера. </p>
-						</div>
-					</li>
-					<li class="col-md-4 col-xs-6 ptb-15 wow zoomIn" data-wow-delay="0ms" data-wow-duration="1000ms">
-						<div class="service-box">
-							<i class="ct ct-crane fz-60">
-                            <span class="path1"></span><span class="path2"></span><span class="path3"></span><span class="path4"></span><span class="path5"></span><span class="path6"></span><span class="path7"></span><span class="path8"></span><span class="path9"></span><span class="path10"></span><span class="path11"></span><span class="path12"></span><span class="path13"></span>
-                            </i>
-							<h4 class="fw-7">БЕТОННЫЙ ТРАНСПОРТ</h4>
-							<p class="fz-13">Вариантом перевозки бетона является бетоносмеситель или бетоносмеситель.</p>
-						</div>
+						
 					</li>
 				</ul>
 			</div>
